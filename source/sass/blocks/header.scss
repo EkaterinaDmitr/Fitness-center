@@ -1,0 +1,23 @@
+.header {
+  margin-bottom: 120px;
+}
+.header__wrapper {
+  min-height: 658px;
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  padding: 30px 0;
+}
+
+.header__headline {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+}
+
+.header__tel {
+  font-family: $bebasNeue;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+  color: $white;
+}

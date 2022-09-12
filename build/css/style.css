@@ -804,7 +804,6 @@ button,
   -ms-flex-align: end;
   align-items: flex-end;
   font-family: "Bebas Neue", "Verdana", sans-serif;
-  letter-spacing: 0.03em;
   color: #FFFFFF;
 }
 
@@ -819,15 +818,19 @@ button,
   font-size: 109px;
   line-height: 109px;
   text-align: right;
-  padding: 0 0 0 124px;
+  padding: 0 0 18px 100px;
+  margin-top: 24px;
+  letter-spacing: 0.02em;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ffffff;
 }
 
 .greetings__text-wrapper ul {
   position: absolute;
-  left: 0;
-  top: 50%;
+  left: -21px;
+  top: 36%;
+  text-align: end;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 
 .greetings__text-wrapper li {
@@ -947,6 +950,1085 @@ button,
   left: -10%;
 }
 
+.subscription {
+  background: #f8f9fc;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.subscription::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+  width: 287px;
+  height: 494px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-size: cover;
+  background-image: url("../img/disks-desktop@1x.png");
+}
+
+.webp .subscription::before {
+  background-image: url("../img/disks-desktop@1x.webp");
+}
+
+.subscription__center {
+  max-width: 1160px;
+  margin: auto;
+  padding-top: 114px;
+  padding-bottom: 80px;
+}
+
+.subscription h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 700;
+  color: #102654;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: auto;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 38px;
+}
+
+.subscription__times {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
+.subscription__times-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subscription__times-list::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e4e4e4;
+}
+
+.subscription__time-item {
+  position: relative;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #787878;
+  margin-right: 47px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e4e4e4;
+  outline: none;
+}
+
+.subscription__time-item:hover {
+  color: #102654;
+}
+
+.subscription__time-item:focus {
+  cursor: pointer;
+}
+
+.subscription__time-item:last-of-type {
+  margin-right: 0;
+}
+
+.subscription__time-item:hover,
+.subscription__time-item:focus {
+  border-bottom: 2px solid #d10a42;
+  cursor: pointer;
+}
+
+.subscription__rates-list {
+  width: 1160px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.subscription__rate-item {
+  width: 360px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  background: #ffffff;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  position: relative;
+  z-index: 1;
+}
+
+.subscription__rate-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.subscription__rate-item:hover,
+.subscription__rate-item:focus {
+  background: -o-linear-gradient(120deg, #003d85, #b80027 80%);
+  background: linear-gradient(-30deg, #003d85, #b80027 80%);
+}
+
+.subscription__inner {
+  padding-top: 55px;
+  padding-bottom: 60px;
+  padding-left: 69px;
+  padding-right: 70px;
+  text-align: center;
+  background: white;
+}
+
+.subscription__inner h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #102654;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.subscription__inner p:first-of-type {
+  display: block;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #495a7d;
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.subscription__inner div {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: 700;
+  color: #103aae;
+  padding-right: 44px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
+}
+
+.subscription__inner div::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 30px;
+  height: 42px;
+  z-index: 2;
+  background: url("../img/icon-cureency.svg") 50% 50% no-repeat;
+}
+
+.subscription__inner div::after {
+  content: attr(data-price);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  font-size: 100px;
+  line-height: 150px;
+  color: rgba(232, 232, 232, 0.48);
+}
+
+.subscription__inner span {
+  position: relative;
+  z-index: 2;
+}
+
+.games {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 114px;
+}
+
+.games__left {
+  width: 500px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 76px;
+  padding-bottom: 85px;
+  padding-left: 78px;
+  padding-right: 30px;
+  background: #ed0233;
+}
+
+.games__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 9px;
+}
+
+.games h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 90px;
+  line-height: 90px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 50px;
+  width: 100%;
+}
+
+.games__scedule {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 3px;
+}
+
+.games__date {
+  margin-bottom: 8px;
+}
+
+.games__date-title {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  display: block;
+  position: relative;
+}
+
+.games__date-title::before {
+  content: "";
+  width: 64px;
+  height: 1px;
+  background: #ffffff;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+}
+
+.games__date-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.games__day {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  margin-right: 7px;
+}
+
+.games__month-year {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  width: 65px;
+  padding-top: 11px;
+}
+
+.games__time-title {
+  font-size: 18px;
+  line-height: 27px;
+  position: relative;
+}
+
+.games__time-title::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  background: #ffffff;
+  width: 88px;
+  height: 1px;
+}
+
+.games__time-text {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.games p {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 47px;
+}
+
+.games__right {
+  width: 660px;
+  background-color: #010245;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../img/sportsman-desktop@1x.jpeg");
+}
+
+.webp .games__right {
+  background-image: url("../../img/sportsman-desktop@1x.webp");
+}
+
+.no-webp .games__right {
+  background-image: url("../img/sportsman-desktop@1x.jpg");
+}
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 4px solid #ffffff;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.button--introduction {
+  width: 234px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: -2px;
+}
+
+.button--subscription {
+  width: 208px;
+  padding-top: 25px;
+  padding-bottom: 27px;
+  color: #102654;
+  -webkit-box-shadow: inset 0 0 0 2px #102654;
+  box-shadow: inset 0 0 0 2px #102654;
+  border: none;
+}
+
+.button--subscription:hover,
+.button--subscription:focus {
+  opacity: 1;
+  outline: none;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: -o-linear-gradient(140deg, #003d85, #b80027 70%);
+  background: linear-gradient(-50deg, #003d85, #b80027 70%);
+}
+
+.button--games {
+  background: transparent;
+  width: 347px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-left: -2px;
+}
+
+.button--submit {
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+  border-width: 3px;
+  width: 412px;
+  margin-left: -1px;
+  background: transparent;
+}
+
+.trainers {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 110px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.trainers__control-left {
+  border-color: transparent;
+  position: absolute;
+  border-left: 0;
+  top: 236px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-right: 16px solid #afafaf;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-left:hover,
+.trainers__control-left:focus {
+  cursor: pointer;
+}
+
+.trainers__control-left::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 1px;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-right: 16px solid #ffffff;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-right {
+  border-color: transparent;
+  position: absolute;
+  top: 236px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-left: 16px solid #afafaf;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-right:hover,
+.trainers__control-right:focus {
+  cursor: pointer;
+}
+
+.trainers__control-right::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 1px;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-left: 16px solid #ffffff;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-left:hover,
+.trainers__control-right:hover,
+.trainers__control-left:focus,
+.trainers__control-right:focus {
+  cursor: pointer;
+}
+
+.trainers h2 {
+  padding-left: 58px;
+  padding-right: 58px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 700;
+  color: #102654;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 46px;
+}
+
+.trainers__wrap {
+  max-width: 1180px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.trainers__list {
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.trainers__item {
+  width: 260px;
+  height: 294px;
+  margin-right: 40px;
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  z-index: 2;
+}
+
+.trainers__item img {
+  width: 260px;
+  height: 294px;
+  display: block;
+}
+
+.trainers__inner {
+  width: 260px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 243px;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.trainers__inner p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: -3px;
+}
+
+.trainers__inner span {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #b6bdcc;
+  margin-top: 0;
+  margin-bottom: 32px;
+  display: none;
+}
+
+.trainers__summary-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  padding-left: 70px;
+  padding-right: 10px;
+  display: none;
+}
+
+.trainers__summary-list li {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 13px;
+  position: relative;
+}
+
+.trainers__summary-list li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -15px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.trainers__item:hover {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.trainers__item:hover .trainers__inner {
+  padding-top: 50px;
+  background-color: rgba(16, 38, 84, 0.9);
+}
+
+.trainers__item:hover span {
+  display: block;
+}
+
+.trainers__item:hover .trainers__summary-list {
+  display: block;
+}
+
+.advantage {
+  padding: 116px 0 112px;
+  background-color: #f8f9fc;
+}
+
+.advantage h2 {
+  margin-top: 0;
+  margin-bottom: 65px;
+  text-align: center;
+  letter-spacing: 1.4px;
+}
+
+.advantage h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.advantage__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 60px;
+}
+
+.advantage__block-border {
+  position: relative;
+  padding-bottom: 69px;
+}
+
+.advantage__block-border::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  left: 0;
+  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+}
+
+.advantage__block-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(50% - 120px);
+  padding-left: 23px;
+  padding-right: 60px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.advantage__block-wrapper p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.advantage__block-bottom {
+  padding-top: 80px;
+}
+
+.advantage__block-inner {
+  margin-right: 34px;
+}
+
+.advantage__block-column {
+  padding-left: 60px;
+  padding-right: 0;
+}
+
+.advantage__block-column::before {
+  left: 60px;
+  right: 0;
+}
+
+.advantage__number {
+  display: block;
+  margin: -15px 0 -5px 0;
+  font-weight: bold;
+  font-size: 71px;
+  background: -o-linear-gradient(330deg, #ed0233 0%, #063db4 70%);
+  background: linear-gradient(120deg, #ed0233 0%, #063db4 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.advantage__unit {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  color: #2e35ac;
+}
+
+.advantage__info h3 {
+  margin-bottom: 9px;
+}
+
+.advantage__main-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  max-width: 240px;
+  padding: 50px 34px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #102654;
+}
+
+.advantage__main-block h3 {
+  margin-bottom: 43px;
+  font-size: 26px;
+}
+
+.advantage__main-block p {
+  margin: 0;
+}
+
+.advantage__main-number {
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 74px;
+  color: #ffffff;
+}
+
+/* tablet */
+
+/* mobile */
+
+.discount {
+  padding-top: 114px;
+}
+
+.discount h2 {
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 47px 0;
+  text-align: center;
+}
+
+.discount__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.discount__info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(50% - 20px);
+  background-color: #426ddd;
+}
+
+.discount__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 280px;
+  padding: 38px 45px 45px 45px;
+  background-color: #ed0233;
+  color: #ffffff;
+}
+
+.discount__info p {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.discount__info-unit {
+  margin-bottom: 45px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.discount__info-number {
+  margin-bottom: 17px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.discount__offer .discount__more {
+  color: #102654;
+  font-weight: bold;
+  border-color: #102654;
+}
+
+.discount__more {
+  margin-top: auto;
+  padding-bottom: 1px;
+  padding-top: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff;
+  font-size: 13px;
+}
+
+.discount__more:hover,
+.discount__more:focus {
+  color: #d10a42;
+  border-color: #d10a42;
+}
+
+.discount__more--year:hover,
+.discount__more--year:focus {
+  color: #102654;
+  border-color: #102654;
+}
+
+.discount__offer {
+  width: calc(50% - 20px);
+}
+
+.discount__offer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 560px;
+  min-height: 210px;
+  margin-bottom: 40px;
+  padding: 24px 35px 28px 28px;
+  border: 7px solid transparent;
+  background: -o-linear-gradient(#ffffff, #ffffff) padding-box, -o-linear-gradient(315deg, #d10a42 0%, #00359f 80%) border-box;
+  background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #d10a42 0%, #00359f 80%) border-box;
+}
+
+.discount__offer-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.discount__offer-wrapper h3 {
+  margin: 0 0 10px 0;
+}
+
+.discount__offer-wrapper p {
+  margin: 0;
+}
+
+.discount__img {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+}
+
+.discount__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* tablet */
+
+/* mobile */
+
+.main-footer {
+  background: #030a1a;
+  padding-top: 41px;
+  padding-bottom: 33px;
+}
+
+.main-footer__center {
+  width: 1160px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-footer__logo {
+  margin-right: 0;
+}
+
+.main-footer__nav-wrap {
+  margin-left: 275px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.main-footer__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 3px;
+}
+
+.main-footer__nav-item {
+  margin-right: 41px;
+  margin-bottom: 10px;
+}
+
+.main-footer__nav-link {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-footer__nav-link:hover,
+.main-footer__nav-link:focus {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: auto;
+  width: 110px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.socials__item {
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+
+.socials__item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.socials__item--vk {
+  width: 25px;
+  height: 25px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.socials__item--ok {
+  width: 25px;
+  height: 25px;
+}
+
+.socials__item--reddit {
+  width: 25px;
+  height: 25px;
+}
+
+.socials__link--vk {
+  background: url("../img/vk-icon.svg") 50% 50% no-repeat;
+}
+
+.socials__link--ok {
+  background: url("../../img/ok.svg") 50% 50% no-repeat;
+}
+
+.socials__link--reddit {
+  background: url("../../img/reddit.svg") 50% 50% no-repeat;
+}
+
+.socials__link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+}
+
+.socials__link:hover,
+.socials__link:focus {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.video {
+  position: absolute;
+  top: 38%;
+  left: -10%;
+}
+
+.video__button {
+  background: transparent;
+  border: none;
+}
+
+.video__button::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 37%;
+  background-image: url("../../img/play.svg");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1032,6 +2114,304 @@ button,
     top: 65%;
     left: 25%;
   }
+
+  .subscription {
+    margin-bottom: 100px;
+  }
+
+  .subscription::before {
+    right: 0;
+    bottom: -125px;
+    width: 347px;
+    height: 444px;
+    background-size: cover;
+  }
+
+  .webp .subscription::before {
+    background-image: url("../img/disks-tablet@1x.webp");
+  }
+
+  .no-webp .subscription::before {
+    background-image: url("../img/disks-tablet@1x.png");
+  }
+
+  .subscription__center {
+    max-width: none;
+    padding-top: 95px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .subscription h2 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .subscription__times {
+    margin-bottom: 44px;
+  }
+
+  .subscription__time-item {
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 54px;
+    padding-bottom: 13px;
+  }
+
+  .subscription__rates-list {
+    display: block;
+    width: 442px;
+    margin: 0 auto;
+  }
+
+  .subscription__rate-item {
+    width: 442px;
+  }
+
+  .subscription__inner div::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 61px;
+  }
+
+  .subscription__inner div::after {
+    left: 44px;
+  }
+
+  .games {
+    max-width: 678px;
+    margin-bottom: 95px;
+  }
+
+  .games__left {
+    width: 292px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    padding-left: 45px;
+    padding-right: 30px;
+    margin-right: 0;
+  }
+
+  .games__inner {
+    margin-bottom: 1px;
+  }
+
+  .games h2 {
+    font-size: 52px;
+    line-height: 52px;
+    width: 300px;
+    margin-right: 30px;
+  }
+
+  .games__scedule {
+    width: 100%;
+    padding-top: 1px;
+  }
+
+  .games__date {
+    margin-bottom: 0;
+  }
+
+  .games__date-title {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .games__date-title::before {
+    width: 42px;
+    height: 1px;
+    bottom: -3px;
+  }
+
+  .games__day {
+    font-size: 24px;
+    line-height: 36px;
+    margin-right: 4px;
+  }
+
+  .games__month-year {
+    font-size: 10px;
+    line-height: 12px;
+    width: 40px;
+    padding-top: 5px;
+  }
+
+  .games__time-title {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: -3px;
+  }
+
+  .games__time-title::before {
+    bottom: -2px;
+    left: 0;
+    width: 56px;
+  }
+
+  .games__time-text {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .games p {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 31px;
+  }
+
+  .games__right {
+    width: 386px;
+    background-size: cover;
+  }
+
+  .webp .games__right {
+    background-image: url("../img/sportsman-tablet@1x.webp");
+  }
+
+  .no-webp .games__right {
+    background-image: url("../img/sportsman-tablet@1x.jpg");
+  }
+
+  .button--introduction {
+    width: 187px;
+  }
+
+  .button--games {
+    font-size: 10px;
+    line-height: 12px;
+    border-width: 2px;
+    width: 204px;
+    margin-left: -1px;
+    padding-top: 12px;
+    padding-bottom: 13px;
+  }
+
+  .button--submit {
+    width: 474px;
+  }
+
+  .trainers {
+    max-width: 678px;
+    padding-bottom: 80px;
+    margin-bottom: 10px;
+  }
+
+  .trainers__control-left {
+    top: 218px;
+  }
+
+  .trainers__control-right {
+    top: 218px;
+  }
+
+  .trainers h2 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 35px;
+  }
+
+  .trainers__wrap {
+    max-width: 586px;
+  }
+
+  .trainers__item {
+    width: 268px;
+    margin-right: 30px;
+  }
+
+  .trainers__item img {
+    width: 268px;
+    height: 294px;
+  }
+
+  .trainers__inner {
+    width: 268px;
+    padding-top: 243px;
+  }
+
+  .trainers__inner p {
+    padding-left: 13px;
+    margin-top: 0;
+    margin-bottom: -3px;
+  }
+
+  .trainers__inner span {
+    padding-left: 13px;
+    margin-bottom: 31px;
+  }
+
+  .trainers__summary-list {
+    padding-right: 20px;
+  }
+
+  .trainers__item:hover .trainers__inner {
+    padding-top: 51px;
+  }
+
+  .main-footer {
+    padding-top: 44px;
+    padding-bottom: 36px;
+  }
+
+  .main-footer__center {
+    width: 678px;
+    margin: 0 auto;
+  }
+
+  .main-footer__nav-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 63px;
+  }
+
+  .main-footer__nav-list {
+    padding-top: 3px;
+  }
+
+  .main-footer__nav-item {
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+
+  .socials {
+    width: 100px;
+  }
+
+  .socials__item {
+    margin-right: 20px;
+  }
+
+  .socials__item--vk {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+  .webp .subscription::before {
+    background-image: url("../img/disks-tablet@2x.webp");
+  }
+
+  .no-webp .subscription::before {
+    background-image: url("../img/disks-tablet@2x.png");
+  }
+
+  .webp .games__right {
+    background-image: url("../img/sportsman-tablet@2x.webp");
+  }
+
+  .no-webp .games__right {
+    background-image: url("../img/sportsman-tablet@2x.jpg");
+  }
 }
 
 @media (max-width: 767px) {
@@ -1062,5 +2442,563 @@ button,
 
   .greetings__text-wrapper h1 {
     font-size: 78px;
+  }
+
+  .subscription {
+    margin-bottom: 70px;
+  }
+
+  .subscription::before {
+    display: none;
+  }
+
+  .subscription__center {
+    padding-top: 61px;
+    padding-bottom: 35px;
+  }
+
+  .subscription h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .subscription__times {
+    margin-bottom: 34px;
+  }
+
+  .subscription__time-item {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 45px;
+    padding-bottom: 12px;
+  }
+
+  .subscription__rates-list {
+    width: 290px;
+  }
+
+  .subscription__rate-item {
+    width: 290px;
+    margin-bottom: 35px;
+  }
+
+  .subscription__inner {
+    padding-top: 42px;
+    padding-bottom: 47px;
+    padding-left: 34px;
+    padding-right: 35px;
+  }
+
+  .subscription__inner h3 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .subscription__inner p:first-of-type {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 53px;
+  }
+
+  .subscription__inner div {
+    font-size: 48px;
+    line-height: 72px;
+    padding-right: 33px;
+    margin-bottom: 32px;
+  }
+
+  .subscription__inner div::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 36px;
+    width: 24px;
+    height: 33px;
+    background-size: cover;
+  }
+
+  .subscription__inner div::after {
+    font-size: 80px;
+    line-height: 120px;
+    left: 22px;
+    top: -45px;
+  }
+
+  .games {
+    max-width: 290px;
+    margin-bottom: 66px;
+    display: block;
+  }
+
+  .games__left {
+    width: 290px;
+    padding-left: 44px;
+    padding-right: 30px;
+    margin-right: 0;
+  }
+
+  .games__left h2 {
+    margin-right: 30px;
+  }
+
+  .games__right {
+    width: 290px;
+    height: 292px;
+    background-size: cover;
+  }
+
+  .webp .games__right {
+    background-image: url("../img/sportsman-phone@1x.webp");
+  }
+
+  .no-webp .games__right {
+    background-image: url("../img/sportsman-phone@1x.jpg");
+  }
+
+  .button--introduction {
+    width: calc(100% + 4px);
+    margin-right: 0;
+    margin-left: -1px;
+    padding-bottom: 22px;
+  }
+
+  .button--submit {
+    width: 292px;
+    padding-bottom: 19px;
+  }
+
+  .trainers {
+    max-width: 290px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  .trainers__control-left {
+    top: 207px;
+    border-top: 9px solid transparent;
+    border-right: 10px solid #afafaf;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-left::before {
+    top: -9px;
+    left: 1px;
+    border-top: 9px solid transparent;
+    border-right: 10px solid #ffffff;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-right {
+    top: 207px;
+    border-top: 9px solid transparent;
+    border-left: 10px solid #afafaf;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-right::before {
+    top: -9px;
+    right: 1px;
+    border-top: 9px solid transparent;
+    border-left: 10px solid #ffffff;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-left:focus {
+    outline: none;
+  }
+
+  .trainers__control-right:focus {
+    outline: none;
+  }
+
+  .trainers h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 36px;
+  }
+
+  .trainers__wrap {
+    max-width: 246px;
+  }
+
+  .trainers__item {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainers__item img {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainers__inner {
+    width: 226px;
+    padding-top: 220px;
+  }
+
+  .trainers__inner p {
+    padding-left: 20px;
+  }
+
+  .trainers__inner span {
+    padding-left: 20px;
+    margin-bottom: 32px;
+  }
+
+  .trainers__summary-list {
+    padding-left: 49px;
+  }
+
+  .trainers__item:hover .trainers__inner {
+    padding-top: 40px;
+  }
+
+  .advantage {
+    padding-top: 95px;
+    padding-bottom: 93px;
+  }
+
+  .advantage h2 {
+    margin-bottom: 50px;
+  }
+
+  .advantage__inner {
+    padding: 0;
+  }
+
+  .advantage__number {
+    margin-bottom: -3px;
+    font-size: 58px;
+  }
+
+  .advantage h3 {
+    font-size: 20px;
+  }
+
+  .advantage__block-wrapper {
+    width: calc(50% - 16px);
+    padding: 0;
+  }
+
+  .advantage__block-wrapper::before {
+    display: none;
+  }
+
+  .advantage__block-border {
+    border-bottom: none;
+  }
+
+  .advantage__block-inner {
+    margin-right: 29px;
+  }
+
+  .advantage__main-block {
+    position: static;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    max-width: 442px;
+    min-height: 239px;
+    padding: 25px 135px;
+    margin: 30px auto 53px;
+  }
+
+  .advantage__main-block h3 {
+    margin-bottom: 26px;
+  }
+
+  .advantage__main-number {
+    margin-bottom: 30px;
+  }
+
+  .advantage__info h3 {
+    margin-top: -6px;
+    margin-bottom: 10px;
+  }
+
+  .discount {
+    padding-top: 81px;
+  }
+
+  .discount h2 {
+    margin-bottom: 36px;
+  }
+
+  .discount__wrapper {
+    display: block;
+  }
+
+  .discount__info-wrapper {
+    width: auto;
+    height: 462px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .discount__info {
+    max-width: 279px;
+  }
+
+  .discount__offer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: auto;
+  }
+
+  .discount__offer-info {
+    padding: 28px 35px;
+  }
+
+  .discount__offer-info h3 {
+    font-size: 26px;
+  }
+
+  .discount__offer-info p {
+    margin: 0 0 70px 0;
+  }
+
+  .discount__offer-wrapper {
+    width: calc(50% - 15px);
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .discount__offer-wrapper:last-child {
+    margin-right: 0;
+  }
+
+  .main-footer {
+    padding-top: 47px;
+    padding-bottom: 40px;
+  }
+
+  .main-footer__center {
+    width: 290px;
+    display: block;
+    position: relative;
+  }
+
+  .main-footer__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .main-footer__nav-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .main-footer__nav-list {
+    display: block;
+    padding-top: 0;
+    margin-left: 0;
+  }
+
+  .main-footer__nav-list--first {
+    margin-top: 40px;
+  }
+
+  .main-footer__nav-list--second {
+    margin-left: 76px;
+  }
+
+  .main-footer__nav-item {
+    margin-right: 0;
+    margin-bottom: 21px;
+  }
+
+  .main-footer__nav-link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .socials {
+    margin-left: 0;
+    width: 143px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .socials__item {
+    margin-right: 35px;
+  }
+
+  .socials__item:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  .socials__item--vk {
+    width: 25px;
+    height: 25px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+
+  .socials__item--ok {
+    width: 25px;
+    height: 25px;
+  }
+
+  .socials__item--reddit {
+    width: 25px;
+    height: 25px;
+  }
+
+  .socials__link {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .webp .games__right {
+    background-image: url("../img/sportsman-phone@2x.webp");
+  }
+
+  .no-webp .games__right {
+    background-image: url("../img/sportsman-phone@2x.jpg");
+  }
+}
+
+@media (max-width: 320px) {
+  .advantage {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .advantage h2 {
+    margin-bottom: 51px;
+  }
+
+  .advantage__inner {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .advantage__block-wrapper {
+    display: block;
+    width: auto;
+    padding-left: 0;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+
+  .advantage__block-wrapper:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .advantage__block-inner {
+    margin-right: 0;
+  }
+
+  .advantage__info {
+    margin-top: 15px;
+  }
+
+  .advantage__main-block {
+    display: block;
+    max-width: none;
+    padding: 30px 65px;
+    min-height: 239px;
+    margin: 46px -48px 50px -48px;
+  }
+
+  .advantage__main-block h3 {
+    margin-top: -4px;
+    margin-bottom: 20px;
+  }
+
+  .advantage__main-number {
+    margin-bottom: 25px;
+  }
+
+  .discount {
+    padding-top: 70px;
+  }
+
+  .discount__info {
+    width: auto;
+    max-width: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 44px;
+  }
+
+  .discount__info-wrapper {
+    display: block;
+    height: auto;
+  }
+
+  .discount__offer {
+    display: block;
+  }
+
+  .discount__offer-wrapper {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+    margin: 0 0 30px 0;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    text-align: center;
+  }
+
+  .discount__offer-info {
+    max-width: none;
+    text-align: center;
+  }
+
+  .discount__offer-info p {
+    margin: 0 0 35px 0;
+  }
+
+  .discount__img {
+    height: 299px;
+  }
+
+  .discount__info-number {
+    margin-bottom: 30px;
+  }
+
+  .discount__more {
+    padding-top: 8px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .webp .subscription::before {
+    background-image: url("../img/disks-desktop@2x.webp");
+  }
+
+  .no-webp .subscription::before {
+    background-image: url("../img/disks-desktop@2x.png");
+  }
+
+  .webp .games__right {
+    background-image: url("../img/sportsman-desktop@2x.webp");
+  }
+
+  .no-webp .games__right {
+    background-image: url("../img/sportsman-desktop@2x.jpg");
   }
 }

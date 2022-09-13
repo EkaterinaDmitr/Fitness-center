@@ -8,8 +8,19 @@
   }
 
   @include vp-767 {
+    align-items: flex-start;
+
     img {
       display: none;
+    }
+  }
+
+  picture {
+    margin-left: -79px;
+    margin-top: -4px;
+
+    @include vp-1279 {
+      margin-left: 0;
     }
   }
 }
@@ -41,10 +52,11 @@
     font-size: 109px;
     line-height: 109px;
     text-align: right;
-    padding: 0 0 18px 100px;
+    padding: 0 0 13px 100px;
     margin-top: 24px;
-    letter-spacing: 0.02em;
-    -webkit-text-stroke-width: 2px;
+    margin-bottom: 37px;
+    letter-spacing: 0.024em;
+    -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: $white;
 
     @include vp-1199 {
@@ -73,7 +85,7 @@
 
   a {
     display: inline-block;
-    font-family: 'Roboto Condensed';
+    font-family: $robotoCondensed;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -82,7 +94,8 @@
     text-transform: uppercase;
     color: $white;
     border: 4px solid #FFFFFF;
-    padding: 24px 56px;
+    padding: 20px 53px;
+    margin-bottom: 44px;
   }
 }
 

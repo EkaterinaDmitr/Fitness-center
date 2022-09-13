@@ -1,12 +1,12 @@
 .gym-block {
   display: flex;
   justify-content: space-between;
-  min-height: 756px;
+  min-height: 637px;
 
   @include vp-1199 {
     flex-direction: column;
     align-items: center;
-    min-height: 854px;
+    min-height: 760px;
     justify-content: flex-start;
   }
 }
@@ -24,6 +24,10 @@
     line-height: 49px;
     letter-spacing: 0.03em;
     margin: 0;
+
+    @include vp-1199 {
+      font-size: 42px;
+    }
   }
 
   h3 {
@@ -31,6 +35,10 @@
     font-size: 18px;
     line-height: 150%;
     margin: 0 0 43px;
+
+    @include vp-1199 {
+      margin: 0 0 35px
+    }
   }
 
   p {
@@ -50,7 +58,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
+    margin: 0 0 37px;
 
     p:last-child {
       display: none;
@@ -69,6 +77,9 @@
 }
 
 .gym-block__img {
+  @include vp-1199 {
+    width: 768px;
+  }
 }
 
 .gym-block__video {

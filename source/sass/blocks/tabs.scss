@@ -1,0 +1,31 @@
+
+.tabs {
+  text-align: center;
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs>div {
+  /* скрыть контент по умолчанию */
+  display: none;
+  padding: 53px 0;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+  display: block;
+}
+
+
+.tabs>label:not(:first-of-type) {
+  border-left: none;
+}
+
+.tabs>input[type="radio"]:checked+label {
+  // background-color: #fff;
+  // border-bottom: 1px solid #fff;
+}

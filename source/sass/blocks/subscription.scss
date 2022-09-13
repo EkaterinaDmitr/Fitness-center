@@ -1,0 +1,391 @@
+.subscription {
+  background: #f8f9fc;
+  margin-bottom: 120px;
+  position: relative;
+  padding-top: 119px;
+  padding-bottom: 20px;
+}
+
+.subscription::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -102px;
+  width: 287px;
+  height: 494px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-size: cover;
+  background-image: url("../img/disks-desktop@1x.png");
+
+}
+
+.subscription h2::before {
+  content: "";
+  position: absolute;
+  width: 26%;
+  height: 2px;
+  background-color: rgba(120, 120, 120, 0.2);
+  left: 37%;
+  top: 27%;
+
+}
+
+
+.webp .subscription::before {
+  background-image: url("../img/disks-desktop@1x.webp");
+}
+
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .webp .subscription::before {
+    background-image: url("../img/disks-desktop@2x.webp");
+  }
+
+  .no-webp .subscription::before {
+    background-image: url("../img/disks-desktop@2x.png");
+  }
+}
+
+.subscription__center {
+  max-width: 1160px;
+  margin: auto;
+  padding-top: 114px;
+  padding-bottom: 80px;
+}
+
+.subscription h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 700;
+  color: #102654;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: auto;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 38px;
+}
+
+.subscription__times {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
+.subscription__times-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subscription__times-list::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(228, 228, 228);
+}
+
+.subscription__time-item {
+  position: relative;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #787878;
+  margin-right: 47px;
+  padding-bottom: 12px;
+  outline: none;
+}
+
+.subscription__time-item:hover {
+  color: #102654;
+}
+
+.subscription__time-item:focus {
+  cursor: pointer;
+}
+
+.subscription__time-item:last-of-type {
+  margin-right: 0;
+}
+
+.subscription__time-item:hover,
+.subscription__time-item:focus {
+  border-bottom: 2px solid #d10a42;
+  cursor: pointer;
+}
+
+.subscription__rates-list {
+  width: 1160px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.subscription__rate-item {
+  width: 360px;
+  box-sizing: border-box;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  background: #ffffff;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  position: relative;
+  z-index: 1;
+}
+
+.subscription__rate-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.subscription__rate-item:hover,
+.subscription__rate-item:focus {
+  background: linear-gradient(-30deg, #003d85, #b80027 80%);
+}
+
+.subscription__inner {
+  padding-top: 55px;
+  padding-bottom: 60px;
+  padding-left: 69px;
+  padding-right: 70px;
+  text-align: center;
+  background: white;
+}
+
+.subscription__inner h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #102654;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.subscription__inner p:first-of-type {
+  display: block;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #495a7d;
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.subscription__inner div {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: 700;
+  color: #103aae;
+  padding-right: 44px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
+}
+
+.subscription__inner div::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 30px;
+  height: 42px;
+  z-index: 2;
+  background: url("../img/icon-cureency.svg") 50% 50% no-repeat;
+}
+
+.subscription__inner div::after {
+  content: attr(data-price);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  font-size: 100px;
+  line-height: 150px;
+  color: rgba(232, 232, 232, 0.48);
+}
+
+.subscription__inner span {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: $desktop-width) {
+  .subscription {
+    margin-bottom: 100px;
+  }
+
+  .subscription::before {
+    right: 0;
+    bottom: -125px;
+    width: 347px;
+    height: 444px;
+    background-size: cover;
+  }
+
+  .webp .subscription::before {
+    background-image: url("../img/disks-tablet@1x.webp");
+  }
+
+  .no-webp .subscription::before {
+    background-image: url("../img/disks-tablet@1x.png");
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .subscription::before {
+      background-image: url("../img/disks-tablet@2x.webp");
+    }
+
+    .no-webp .subscription::before {
+      background-image: url("../img/disks-tablet@2x.png");
+    }
+  }
+
+  .subscription__center {
+    max-width: none;
+    padding-top: 95px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .subscription h2 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .subscription__times {
+    margin-bottom: 44px;
+  }
+
+  .subscription__time-item {
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 54px;
+    padding-bottom: 13px;
+  }
+
+  .subscription__rates-list {
+    display: block;
+    width: 442px;
+    margin: 0 auto;
+  }
+
+  .subscription__rate-item {
+    width: 442px;
+  }
+
+  .subscription__inner div::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 61px;
+  }
+
+  .subscription__inner div::after {
+    left: 44px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .subscription {
+    margin-bottom: 70px;
+  }
+
+  .subscription::before {
+    display: none;
+  }
+
+  .subscription__center {
+    padding-top: 61px;
+    padding-bottom: 35px;
+  }
+
+  .subscription h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .subscription__times {
+    margin-bottom: 34px;
+  }
+
+  .subscription__time-item {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 45px;
+    padding-bottom: 12px;
+  }
+
+  .subscription__rates-list {
+    width: 290px;
+  }
+
+  .subscription__rate-item {
+    width: 290px;
+    margin-bottom: 35px;
+  }
+
+  .subscription__inner {
+    padding-top: 42px;
+    padding-bottom: 47px;
+    padding-left: 34px;
+    padding-right: 35px;
+  }
+
+  .subscription__inner h3 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .subscription__inner p:first-of-type {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 53px;
+  }
+
+  .subscription__inner div {
+    font-size: 48px;
+    line-height: 72px;
+    padding-right: 33px;
+    margin-bottom: 32px;
+  }
+
+  .subscription__inner div::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 36px;
+    width: 24px;
+    height: 33px;
+    background-size: cover;
+  }
+
+  .subscription__inner div::after {
+    font-size: 80px;
+    line-height: 120px;
+    left: 22px;
+    top: -45px;
+  }
+}

@@ -1,0 +1,359 @@
+.trainers {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 110px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.trainers__control-left {
+  border-color: transparent;
+  position: absolute;
+  border-left: 0;
+  top: 236px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-right: 16px solid #afafaf;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-left:hover,
+.trainers__control-left:focus {
+  cursor: pointer;
+}
+
+.trainers__control-left::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 1px;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-right: 16px solid #ffffff;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-right {
+  border-color: transparent;
+  position: absolute;
+  top: 236px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-left: 16px solid #afafaf;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-right:hover,
+.trainers__control-right:focus {
+  cursor: pointer;
+}
+
+.trainers__control-right::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 1px;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-left: 16px solid #ffffff;
+  border-bottom: 16px solid transparent;
+}
+
+.trainers__control-left:hover,
+.trainers__control-right:hover,
+.trainers__control-left:focus,
+.trainers__control-right:focus {
+  cursor: pointer;
+}
+
+.trainers h2 {
+  padding-left: 58px;
+  padding-right: 58px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 700;
+  color: #102654;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 46px;
+}
+
+.trainers__wrap {
+  max-width: 1180px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.trainers__list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.trainers__item {
+  width: 260px;
+  height: 294px;
+  margin-right: 40px;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+  z-index: 2;
+}
+
+.trainers__item img {
+  width: 260px;
+  height: 294px;
+  display: block;
+}
+
+.trainers__inner {
+  width: 260px;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 243px;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.trainers__inner p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: -3px;
+}
+
+.trainers__inner span {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #b6bdcc;
+  margin-top: 0;
+  margin-bottom: 32px;
+  display: none;
+}
+
+.trainers__summary-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  padding-left: 70px;
+  padding-right: 10px;
+  display: none;
+}
+
+.trainers__summary-list li {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 13px;
+  position: relative;
+}
+
+.trainers__summary-list li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -15px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.trainers__item:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.trainers__item:hover .trainers__inner {
+  padding-top: 50px;
+  background-color: rgba(16, 38, 84, 0.9);
+}
+
+.trainers__item:hover span {
+  display: block;
+}
+
+.trainers__item:hover .trainers__summary-list {
+  display: block;
+}
+
+@media (max-width: $desktop-width) {
+  .trainers {
+    max-width: 678px;
+    padding-bottom: 80px;
+    margin-bottom: 10px;
+  }
+
+  .trainers__control-left {
+    top: 218px;
+  }
+
+  .trainers__control-right {
+    top: 218px;
+  }
+
+  .trainers h2 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 35px;
+  }
+
+  .trainers__wrap {
+    max-width: 586px;
+  }
+
+  .trainers__item {
+    width: 268px;
+    margin-right: 30px;
+  }
+
+  .trainers__item img {
+    width: 268px;
+    height: 294px;
+  }
+
+  .trainers__inner {
+    width: 268px;
+    padding-top: 243px;
+  }
+
+  .trainers__inner p {
+    padding-left: 13px;
+    margin-top: 0;
+    margin-bottom: -3px;
+  }
+
+  .trainers__inner span {
+    padding-left: 13px;
+    margin-bottom: 31px;
+  }
+
+  .trainers__summary-list {
+    padding-right: 20px;
+  }
+
+  .trainers__item:hover .trainers__inner {
+    padding-top: 51px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .trainers {
+    max-width: 290px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  .trainers__control-left {
+    top: 207px;
+    border-top: 9px solid transparent;
+    border-right: 10px solid #afafaf;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-left::before {
+    top: -9px;
+    left: 1px;
+    border-top: 9px solid transparent;
+    border-right: 10px solid #ffffff;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-right {
+    top: 207px;
+    border-top: 9px solid transparent;
+    border-left: 10px solid #afafaf;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-right::before {
+    top: -9px;
+    right: 1px;
+    border-top: 9px solid transparent;
+    border-left: 10px solid #ffffff;
+    border-bottom: 9px solid transparent;
+  }
+
+  .trainers__control-left:focus {
+    outline: none;
+  }
+
+  .trainers__control-right:focus {
+    outline: none;
+  }
+
+  .trainers h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 36px;
+  }
+
+  .trainers__wrap {
+    max-width: 246px;
+  }
+
+  .trainers__item {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainers__item img {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainers__inner {
+    width: 226px;
+    padding-top: 220px;
+  }
+
+  .trainers__inner p {
+    padding-left: 20px;
+  }
+
+  .trainers__inner span {
+    padding-left: 20px;
+    margin-bottom: 32px;
+  }
+
+  .trainers__summary-list {
+    padding-left: 49px;
+  }
+
+  .trainers__item:hover .trainers__inner {
+    padding-top: 40px;
+  }
+}

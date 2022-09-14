@@ -1,6 +1,7 @@
 
 .tabs {
   text-align: center;
+  padding-top: 32px;
 }
 
 .tabs>input[type="radio"] {
@@ -28,4 +29,15 @@
 .tabs>input[type="radio"]:checked+label {
   // background-color: #fff;
   // border-bottom: 1px solid #fff;
+}
+
+
+.tabs__border::before {
+  content: "";
+  position: absolute;
+  width: 26%;
+  height: 2px;
+  background-color: rgba(120,120,120,.2);
+  left: 37%;
+  top: 241px;
 }

@@ -51,7 +51,7 @@
       <main>
         <section class="gym-block container">
           <div class="gym-block__text">
-            <h2>Тренажерный зал</h2>
+            <h2 class="heading">Тренажерный зал</h2>
             <h3>Просторный зал площадью 900 кв/м</h3>
             <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный
               зал оснащен всем необходимым современным оборудованием для всех спортсменов. </p>
@@ -68,8 +68,6 @@
               <source type="img/webp" media="(max-width: 1199px)" srcset="img/gym-block-img_tablet.webp 1x, img/gym-block-img_tablet@2x.webp 2x">
               <!-- 1х: 660px; 2x: 1320px -->
               <source type="img/webp" media="(max-width: 1920px)" srcset="img/gym-block-img_desktop.webp 1x, img/gym-block-img_desktop@2x.webp 2x">
-
-
               <source media="(max-width: 767px)" srcset="img/gym-block-img_mobile.png, img/gym-block-img_mobile@2x.png 2x">
               <source media="(max-width: 1199px)" srcset="img/gym-block-img_tablet.png, img/gym-block-img_tablet@2x.png 2x">
               <img class="gym-block__img" src="img/gym-block-img_desktop.png" srcset="img/gym-block-img_desktop@2x.png" alt="Изображение спортивного зала" width="660" height="401">
@@ -93,17 +91,15 @@
         </section>
 
         <section class="subscription" id="subscription">
-          <h2>Абонементы</h2>
-          <div class="tabs container">
+          <h2 class="heading">Абонементы</h2>
+          <div class="tabs">
+            <span class="tabs__border"></span>
             <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
             <label class="subscription__time-item" for="tab-btn-1">1 месяц</label>
             <input type="radio" name="tab-btn" id="tab-btn-2" value="">
             <label class="subscription__time-item" for="tab-btn-2">6 месяцев</label>
             <input type="radio" name="tab-btn" id="tab-btn-3" value="">
             <label class="subscription__time-item" for="tab-btn-3">12 месяцев</label>
-
-
-
           <div id="content-1">
             <ul class="subscription__rates-list">
               <li class="subscription__rate-item">
@@ -279,8 +275,8 @@
           <div class="games__right"></div>
         </section>
 
-        <section class="trainers">
-          <h2>Тренеры</h2>
+        <section class="trainers" id="trainers">
+          <h2 class="heading">Тренеры</h2>
           <div class="trainers__control-left" tabindex="0"></div>
           <div class="trainers__wrap">
             <ul class="trainers__list">
@@ -395,7 +391,7 @@
 
         <section class="advantage">
           <div class="advantage__wrapper container">
-            <h2>Наши преимущества</h2>
+            <h2 class="heading">Наши преимущества</h2>
             <div class="advantage__inner">
               <div class="advantage__block-wrapper  advantage__block-border">
                 <p class="advantage__block-inner">
@@ -449,9 +445,9 @@
           </div>
         </section>
 
-        <section class="discount">
+        <section class="discount" id="discount">
           <div class="container">
-            <h2>Акции</h2>
+            <h2 class="heading">Акции</h2>
             <div class="discount__wrapper">
               <div class="discount__info-wrapper">
                 <div class="discount__info">
@@ -480,12 +476,9 @@
           </div>
         </section>
 
-        <section class="">
-        </section>
-
 
         <section class="reviews">
-          <h2>Отзывы</h2>
+          <h2 class="heading">Отзывы</h2>
           <div class="reviews__control-left" tabindex="0"></div>
           <div class="reviews__wrap">
             <ul class="reviews__list">
@@ -577,15 +570,15 @@
                 <a class="main-footer__nav-link" href="#" aria-label="Услуги">Услуги</a>
               </li>
               <li class="main-footer__nav-item">
-                <a class="main-footer__nav-link" href="#" aria-label="Абонементы">Абонементы</a>
+                <a class="main-footer__nav-link" href="#subscription" aria-label="Абонементы">Абонементы</a>
               </li>
             </ul>
             <ul class="main-footer__nav-list main-footer__nav-list--second">
               <li class="main-footer__nav-item">
-                <a class="main-footer__nav-link" href="#" aria-label="Акции">Акции</a>
+                <a class="main-footer__nav-link" href="#discount" aria-label="Акции">Акции</a>
               </li>
               <li class="main-footer__nav-item">
-                <a class="main-footer__nav-link" href="#" aria-label="Тренеры">Тренеры</a>
+                <a class="main-footer__nav-link" href="#trainers" aria-label="Тренеры">Тренеры</a>
               </li>
               <li class="main-footer__nav-item">
                 <a class="main-footer__nav-link" href="#" aria-label="Расписание">Расписание</a>

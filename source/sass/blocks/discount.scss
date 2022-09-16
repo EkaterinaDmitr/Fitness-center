@@ -1,15 +1,17 @@
 
 .discount {
   padding-top: 114px;
+  margin-bottom: 120px;
 
-  // h2 {
+
+  h2 {
   //   font-size: 49px;
   //   line-height: 49px;
   //   letter-spacing: 0.03em;
   //   text-transform: uppercase;
-  //   margin: 0 0 47px 0;
+    margin: 0 0 50px 0;
   //   text-align: center;
-  // }
+  }
 }
 
 .discount__wrapper {
@@ -28,27 +30,35 @@
   flex-direction: column;
   align-items: flex-start;
   width: 280px;
-  padding: 38px 45px 45px 45px;
+  padding: 43px 45px 45px 45px;
   background-color:#ed0233;
   color: $white;
 
-  p {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  // p {
+  //   margin: 0 0 42px 0;
+  // }
+}
+
+.discount__info-text {
+  font-family: $robotoCondensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
 }
 
 .discount__info-unit {
   margin-bottom: 45px;
   font-size: 28px;
   font-weight: bold;
+  margin: 0 0 28px;
 }
 
 .discount__info-number {
   margin-bottom: 17px;
   font-size: 70px;
   font-weight: bold;
+  margin: 0 0 23px;
 }
 
 .discount__offer .discount__more {
@@ -57,9 +67,15 @@
   border-color: #102654;
 }
 
+.discount__offer h3 {
+  font-family: $robotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+}
+
 .discount__more {
   margin-top: auto;
-  padding-bottom: 1px;
   padding-top: 20px;
   color: $white;
   font-weight: bold;
@@ -75,6 +91,14 @@
 }
 
 .discount__more--year {
+  font-family: $robotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
   &:hover,
   &:focus {
     color: #102654;

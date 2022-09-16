@@ -6,12 +6,11 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin-left: auto;
-  width: 110px;
   flex-shrink: 0;
 }
 
 .socials__item {
-  margin-right: 25px;
+  margin-right: 12px;
   margin-bottom: 10px;
 }
 
@@ -23,7 +22,6 @@
   width: 25px;
   height: 25px;
   align-self: flex-start;
-  margin-top: 5px;
 }
 
 .socials__item--ok {
@@ -37,7 +35,7 @@
 }
 
 .socials__link--vk {
-  background: url("../img/vk-icon.svg") 50% 50% no-repeat;
+  background: url("../../img/vk.svg") 50% 50% no-repeat;
 }
 
 .socials__link--ok {
@@ -84,7 +82,7 @@
   }
 
   .socials__item {
-    margin-right: 35px;
+    margin-right: 12px;
   }
 
   .socials__item:nth-of-type(3n) {
@@ -95,7 +93,6 @@
     width: 25px;
     height: 25px;
     align-self: flex-start;
-    margin-top: 5px;
   }
 
   .socials__item--ok {

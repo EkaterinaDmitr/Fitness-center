@@ -1520,7 +1520,7 @@ button,
 }
 
 .advantage {
-  padding: 120px 0 112px;
+  padding: 120px 0 34px;
   background-color: #f8f9fc;
 }
 
@@ -1623,6 +1623,10 @@ button,
   margin-bottom: 100px;
 }
 
+.reviews h2 {
+  margin-bottom: 30px;
+}
+
 .reviews__wrap {
   width: 600px;
   margin: 0 auto;
@@ -1659,6 +1663,8 @@ button,
   background: #1c3374;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
 }
 
 .reviews__item img {
@@ -1690,6 +1696,10 @@ button,
   color: #ffffff;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.reviews__inner {
+  width: 330px;
 }
 
 .reviews__control-left {
@@ -1785,10 +1795,8 @@ button,
 .communications__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 45px;
-  padding-top: 65px;
-  padding-right: 103px;
-  padding-left: 120px;
+  margin-bottom: 36px;
+  padding: 70px 103px 0 120px;
   font-family: "Bebas Neue", "Arial Narrow", sans-serif;
   font-size: 49px;
   font-weight: 700;
@@ -1880,10 +1888,8 @@ button,
 .free-lesson__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 44px;
-  padding-top: 65px;
-  padding-right: 103px;
-  padding-left: 103px;
+  margin-bottom: 36px;
+  padding: 70px 103px 0;
   font-family: "Bebas Neue", "Arial Narrow", sans-serif;
   font-size: 49px;
   font-weight: 700;
@@ -1891,6 +1897,141 @@ button,
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.form {
+  max-width: 410px;
+  margin-left: 103px;
+}
+
+.form__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 27px;
+  list-style: none;
+}
+
+.form__item {
+  width: 190px;
+}
+
+.form__field {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #74819c;
+}
+
+.form__field::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form__field::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form__field:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__field::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__field::placeholder {
+  color: #ffffff;
+}
+
+.form__field:focus {
+  outline: none;
+  border-bottom: 2px solid rgba(209, 10, 66, 0.7);
+}
+
+.form__field:focus::-webkit-input-placeholder {
+  color: rgba(209, 10, 66, 0.7);
+}
+
+.form__field:focus::-moz-placeholder {
+  color: rgba(209, 10, 66, 0.7);
+}
+
+.form__field:focus:-ms-input-placeholder {
+  color: rgba(209, 10, 66, 0.7);
+}
+
+.form__field:focus::-ms-input-placeholder {
+  color: rgba(209, 10, 66, 0.7);
+}
+
+.form__field:focus::placeholder {
+  color: rgba(209, 10, 66, 0.7);
+}
+
+.form__button {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 52px;
+  padding-bottom: 19px;
+  padding-left: 53px;
+  border: 4px solid #ffffff;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background-color: transparent;
+  padding-top: 18px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  border: 3px solid #ffffff;
+  cursor: pointer;
+}
+
+.form__button:hover,
+.form__button:focus {
+  outline: none;
+  background: -o-linear-gradient(301.18deg, #d10a42 0.85%, #00359f 100%);
+  background: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+}
+
+.form__button:active {
+  background: rgba(2, 0, 32, 0.7);
+  border-color: #020020;
 }
 
 .tabs {
@@ -1966,13 +2107,12 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: auto;
-  width: 110px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
 .socials__item {
-  margin-right: 25px;
+  margin-right: 12px;
   margin-bottom: 10px;
 }
 
@@ -1985,7 +2125,6 @@ button,
   height: 25px;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  margin-top: 5px;
 }
 
 .socials__item--ok {
@@ -1999,7 +2138,7 @@ button,
 }
 
 .socials__link--vk {
-  background: url("../img/vk-icon.svg") 50% 50% no-repeat;
+  background: url("../../img/vk.svg") 50% 50% no-repeat;
 }
 
 .socials__link--ok {
@@ -2084,6 +2223,11 @@ button,
 
 .discount {
   padding-top: 114px;
+  margin-bottom: 120px;
+}
+
+.discount h2 {
+  margin: 0 0 50px 0;
 }
 
 .discount__wrapper {
@@ -2115,27 +2259,31 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   width: 280px;
-  padding: 38px 45px 45px 45px;
+  padding: 43px 45px 45px 45px;
   background-color: #ed0233;
   color: #ffffff;
 }
 
-.discount__info p {
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
+.discount__info-text {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
 }
 
 .discount__info-unit {
   margin-bottom: 45px;
   font-size: 28px;
   font-weight: bold;
+  margin: 0 0 28px;
 }
 
 .discount__info-number {
   margin-bottom: 17px;
   font-size: 70px;
   font-weight: bold;
+  margin: 0 0 23px;
 }
 
 .discount__offer .discount__more {
@@ -2144,9 +2292,15 @@ button,
   border-color: #102654;
 }
 
+.discount__offer h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+}
+
 .discount__more {
   margin-top: auto;
-  padding-bottom: 1px;
   padding-top: 20px;
   color: #ffffff;
   font-weight: bold;
@@ -2159,6 +2313,16 @@ button,
 .discount__more:focus {
   color: #d10a42;
   border-color: #d10a42;
+}
+
+.discount__more--year {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .discount__more--year:hover,
@@ -3125,6 +3289,22 @@ button,
     line-height: 42px;
   }
 
+  .feedback {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .form {
+    max-width: 472px;
+    margin-left: 133px;
+  }
+
+  .form__item {
+    width: 206px;
+  }
+
   .socials {
     margin-left: 0;
     width: 143px;
@@ -3134,7 +3314,7 @@ button,
   }
 
   .socials__item {
-    margin-right: 35px;
+    margin-right: 12px;
   }
 
   .socials__item:nth-of-type(3n) {
@@ -3146,7 +3326,6 @@ button,
     height: 25px;
     -ms-flex-item-align: start;
     align-self: flex-start;
-    margin-top: 5px;
   }
 
   .socials__item--ok {
@@ -3352,6 +3531,25 @@ button,
     padding-left: 15px;
     font-size: 32px;
     line-height: 32px;
+  }
+
+  .form {
+    max-width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .form__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+
+  .form__item {
+    width: 100%;
+    margin-bottom: 32px;
   }
 
   .discount {

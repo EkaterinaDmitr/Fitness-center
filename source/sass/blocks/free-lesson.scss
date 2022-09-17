@@ -1,0 +1,171 @@
+.free-lesson {
+  width: 50%;
+  padding-bottom: 69px;
+  background-color: #102654;
+
+  &__wrapper {
+    max-width: 683px;
+    margin-left: auto;
+  }
+
+  h3 {
+    // @include pm-zero();
+    margin-bottom: 36px;
+    padding: 70px 110px 0 0;
+    // font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    // @include font(49px, 700, 49px);
+    // text-transform: uppercase;
+    // letter-spacing: 0.03em;
+    color: $white;
+  }
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.free-lesson__form {
+  max-width: 410px;
+  margin-left: 103px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0;
+    margin-bottom: 27px;
+
+    list-style: none;
+  }
+
+  li {
+    min-width: 190px;
+  }
+
+  input {
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 5px 0 5px;
+
+
+    font-size: 14px;
+    color: $white;
+
+    background: none;
+    border: none;
+    border-bottom: 2px solid #74819c;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid rgba(209, 10, 66, 0.7);
+    }
+
+    &:focus::placeholder {
+      color: rgba(209, 10, 66, 0.7);
+    }
+  }
+
+  button {
+    box-sizing: border-box;
+
+    @include button(100%);
+    padding-top: 18px;
+    padding-bottom: 15px;
+
+    font-size: 16px;
+    line-height: 16px;
+
+    border: 3px solid $white;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    }
+
+    &:active {
+      background: rgba(2, 0, 32, 0.7);
+      border-color: #020020;
+    }
+  }
+}
+
+// @media (max-width: $tablet-width) {
+//   .form {
+    // max-width: 472px;
+    // margin-left: 133px;
+
+//     &__item {
+//       width: 206px;
+//     }
+//   }
+// }
+
+// @media (max-width: $mobile-width) {
+//   .form {
+//     max-width: 100%;
+//     margin-left: 15px;
+//     margin-right: 15px;
+
+//     &__list {
+//       flex-direction: column;
+
+//       margin-bottom: 5px;
+//     }
+
+//     &__item {
+//       width: 100%;
+//       margin-bottom: 32px;
+//     }
+//   }
+// }
+
+
+
+// @media (max-width: $tablet-width) {
+//   .free-lesson {
+//     width: 100%;
+//     padding-bottom: 69px;
+
+//     &__wrapper {
+//       width: 100%;
+//       margin: 0;
+//     }
+
+//     &__title {
+//       // margin-bottom: 38px;
+//       // padding-right: 133px;
+//       // padding-left: 133px;
+
+//       // font-size: 42px;
+//       // line-height: 42px;
+//     }
+//   }
+// }
+
+// @media (max-width: $mobile-width) {
+//   .free-lesson {
+//     &__wrapper {
+//       max-width: 100%;
+//     }
+
+//     &__title {
+//       margin-bottom: 39px;
+//       padding-top: 66px;
+//       padding-right: 15px;
+//       padding-left: 15px;
+
+//       font-size: 32px;
+//       line-height: 32px;
+//     }
+//   }
+// }

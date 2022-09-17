@@ -205,52 +205,6 @@
         </div>
       </section>
 
-
-        <!-- <section class="subscription">
-          <div class="subscription__center">
-            <h2>Абонементы</h2>
-            <div class="subscription__times">
-              <ul class="subscription__times-list">
-                <li class="subscription__time-item" tabindex="0">1 месяц</li>
-                <li class="subscription__time-item" tabindex="0">6 месяцев</li>
-                <li class="subscription__time-item" tabindex="0">12 месяцев</li>
-              </ul>
-            </div>
-            <ul class="subscription__rates-list">
-              <li class="subscription__rate-item">
-                <div class="subscription__inner">
-                  <h3>С тренером</h3>
-                  <p>12 занятий</p>
-                  <div data-price="5000">
-                    <span>5000</span>
-                  </div>
-                  <a class="button button--subscription" href="#" aria-label="Покупка абонемента">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="subscription__rate-item">
-                <div class="subscription__inner">
-                  <h3>Дневной</h3>
-                  <p>с 8:00 до 17:00</p>
-                  <div data-price="1700">
-                    <span>1700</span>
-                  </div>
-                  <a class="button button--subscription" href="#" aria-label="Покупка абонемента">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="subscription__rate-item">
-                <div class="subscription__inner">
-                  <h3>Полный день</h3>
-                  <p>с 8:00 до 22:00</p>
-                  <div data-price="2700">
-                    <span>2700</span>
-                  </div>
-                  <a class="button button--subscription" href="#" aria-label="Покупка абонемента">Купить абонемент</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section> -->
-
         <section class="games">
           <div class="games__left">
             <div class="games__inner">
@@ -400,7 +354,7 @@
                 </p>
                 <div class="advantage__info">
                   <h3>Площадь </h3>
-                  <p>Занимайтесь без очередей и толпучки</p>
+                  <p>Занимайтесь без очередей и&nbsp;толпучки</p>
                 </div>
               </div>
               <div class="advantage__block-wrapper  advantage__block-column  advantage__block-border">
@@ -456,14 +410,16 @@
                   <p class="discount__info-text">Безлимитный абонемент в тренажерный зал</p>
                   <a class="discount__more  discount__more--year" href="#">подробнее</a>
                 </div>
-                <figure class="discount__img">
-                  <img src="img/discount-photo.jpg" width="280" height="462" alt="Изображение девушки" data-object-fit="cover">
-                </figure>
+                <picture>
+                  <source media="(max-width: 1199px)" srcset="img/discount-tablet.jpg, img/discount-tablet@2x.jpg 2x">
+
+                  <img class="discount__img" src="img/discount-photo.jpg" width="280" height="462" alt="Изображение девушки" data-object-fit="cover">
+                </picture>
               </div>
               <div class="discount__offer">
                 <div class="discount__offer-wrapper">
                   <h3>Месяц бесплатно</h3>
-                  <p>Приведи друга, получи абонемент в подарок</p>
+                  <p>Приведи друга, получи<br> абонемент в подарок</p>
                   <a class="discount__more" href="#">подробнее</a>
                 </div>
                 <div class="discount__offer-wrapper">
@@ -516,26 +472,26 @@
           <h2 class="visually-hidden">Обратная связь</h2>
           <div class="feedback__free-lesson free-lesson">
             <div class="free-lesson__wrapper">
-              <h3 class="free-lesson__title">Бесплатное занятие</h3>
-              <form class="free-lesson__form form" action="https://echo.htmlacademy.ru" method="post">
-                <ul class="form__list">
-                  <li class="form__item">
-                    <label class="form__label visually-hidden" for="name-field">Имя</label>
-                    <input class="form__field" id="name-field" type="text" name="name" placeholder="Имя" autocomplete="off" required>
+              <h3 class="heading">Бесплатное занятие</h3>
+              <form class="free-lesson__form" action="https://echo.htmlacademy.ru" method="post">
+                <ul>
+                  <li>
+                    <label class="visually-hidden" for="name-field">Имя</label>
+                    <input id="name-field" type="text" name="name" placeholder="Имя" autocomplete="off" required>
                   </li>
-                  <li class="form__item">
-                    <label class="form__label visually-hidden" for="phone-field">Телефон</label>
-                    <input class="form__field" id="phone-field" type="tel" name="phone" placeholder="Телефон" minlength="16" maxlength="17" autocomplete="off" required>
+                  <li>
+                    <label class="visually-hidden" for="phone-field">Телефон</label>
+                    <input id="phone-field" type="tel" name="phone" placeholder="Телефон" minlength="16" maxlength="17" autocomplete="off" required>
                   </li>
                 </ul>
-                <button type="submit" class="button form__button">Отправить</button>
+                <button type="submit" class="button">Отправить</button>
               </form>
             </div>
           </div>
 
           <div class="feedback__communications communications">
-            <h3 class="communications__title">Контакты</h3>
-            <ul class="communications__list">
+            <h3 class="heading">Контакты</h3>
+            <ul>
               <li class="communications__item communications__item--adress">
                 <p class="communications__label">Адрес:</p>
                 <a class="communications__info communications__info--link" target="_blank" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+70+%D0%BB%D0%B5%D1%82+%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8F,+7,+%D0%9E%D0%BC%D1%81%D0%BA,+%D0%9E%D0%BC%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+644074/@54.9853811,73.3087183,17z/data=!3m1!4b1!4m5!3m4!1s0x43ab0197c164ab67:0x79dffa531dcd03a4!8m2!3d54.985378!4d73.310907">
@@ -561,7 +517,7 @@
       </main>
       <footer class="main-footer">
         <div class="main-footer__center">
-          <a class="header__logo">
+          <a class="main-footer__logo">
             <img src="img/svg/logo.svg" width="87" height="20" alt="Логотип фитнес-центра SuperGym">
           </a>
           <div class="main-footer__nav-wrap">

@@ -20,15 +20,10 @@
 
   h2 {
     margin-left: -33px;
-  //   font-family: $bebasNeue;
-  //   font-size: 49px;
-  //   line-height: 49px;
-  //   letter-spacing: 0.03em;
-  //   margin: 0;
 
-  //   @include vp-1199 {
-  //     font-size: 42px;
-  //   }
+    @include vp-1199 {
+      margin: 0 0 8px;
+    }
   }
 
   h3 {

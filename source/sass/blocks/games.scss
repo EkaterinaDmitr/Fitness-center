@@ -3,6 +3,11 @@
   margin: 0 auto;
   display: flex;
   margin-bottom: 120px;
+
+  @include vp-1199 {
+      max-width: 678px;
+      margin-bottom: 100px;
+  }
 }
 
 .games__left {
@@ -141,10 +146,7 @@
 }
 
 @media (max-width: $desktop-width) {
-  .games {
-    max-width: 678px;
-    margin-bottom: 95px;
-  }
+
 
   .games__left {
     width: 292px;

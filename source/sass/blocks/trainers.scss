@@ -90,6 +90,12 @@
 //   letter-spacing: 0.03em;
 //   margin-top: 0;
 //   margin-bottom: 46px;
+
+  @include vp-1199 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0;
+  }
 }
 
 .trainers__wrap {
@@ -228,10 +234,7 @@
   }
 
   .trainers h2 {
-    text-align: center;
-    font-size: 42px;
-    line-height: 42px;
-    margin-bottom: 35px;
+
   }
 
   .trainers__wrap {

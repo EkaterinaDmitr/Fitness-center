@@ -4,6 +4,11 @@
   position: relative;
   padding-top: 119px;
   padding-bottom: 26px;
+
+  @include vp-1199 {
+    padding-top: 95px;
+    margin-bottom: 54px;
+  }
 }
 
 .subscription::before {
@@ -18,6 +23,15 @@
   z-index: 1;
   background-size: cover;
   background-image: url("../img/disks-desktop@1x.png");
+
+  @include vp-1199 {
+    right: 0;
+    top: 80%;
+    width: 347px;
+    height: 444px;
+    background-size: cover;
+    background-image: url("../../img/disks-tablet@1x.png");
+  }
 
 }
 
@@ -58,23 +72,11 @@
 //   margin-bottom: 38px;
 // }
 
-.heading {
-  font-family: $bebasNeue;
-  font-size: 49px;
-  line-height: 49px;
-  font-weight: 700;
-  color: #102654;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin: auto;
-  text-align: center;
-}
-
-.subscription__times {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 38px;
-}
+// .subscription__times {
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 38px;
+// }
 
 .subscription__times-list {
   list-style: none;
@@ -127,12 +129,18 @@
 }
 
 .subscription__rates-list {
-  width: 1160px;
-  margin: auto;
+  // width: 1160px;
+  // margin: auto;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  justify-content: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .subscription__rate-item {
@@ -141,12 +149,15 @@
   margin-right: 40px;
   margin-bottom: 40px;
   background: #ffffff;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 7px;
-  padding-right: 7px;
+  padding: 7px;
   position: relative;
   z-index: 1;
+
+  @include vp-1199 {
+    width: 442px;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
 }
 
 .subscription__rate-item:nth-of-type(3n) {
@@ -159,12 +170,13 @@
 }
 
 .subscription__inner {
-  padding-top: 55px;
-  padding-bottom: 60px;
-  padding-left: 69px;
-  padding-right: 70px;
+  padding: 55px 70px 60px 69px;
   text-align: center;
-  background: white;
+  background: $white;
+
+  @include vp-1199 {
+    padding: 45px 70px 60px 69px;
+  }
 }
 
 .subscription__inner h3 {
@@ -227,166 +239,171 @@
   z-index: 2;
 }
 
-@media (max-width: $desktop-width) {
-  .subscription {
-    margin-bottom: 100px;
-  }
+// @media (max-width: $desktop-width) {
+//   .subscription {
+//     margin-bottom: 100px;
+//   }
 
-  .subscription::before {
-    right: 0;
-    top: 60%;
-    width: 347px;
-    height: 444px;
-    background-size: cover;
-  }
+//   .subscription::before {
+//     right: 0;
+//     top: 60%;
+//     width: 347px;
+//     height: 444px;
+//     background-size: cover;
+//   }
 
-  .webp .subscription::before {
-    background-image: url("../img/disks-tablet@1x.webp");
-  }
+//   .webp .subscription::before {
+//     background-image: url("../img/disks-tablet@1x.webp");
+//   }
 
-  .no-webp .subscription::before {
-    background-image: url("../img/disks-tablet@1x.png");
-  }
+//   .no-webp .subscription::before {
+//     background-image: url("../img/disks-tablet@1x.png");
+//   }
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .webp .subscription::before {
-      background-image: url("../img/disks-tablet@2x.webp");
-    }
+//   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+//     .webp .subscription::before {
+//       background-image: url("../img/disks-tablet@2x.webp");
+//     }
 
-    .no-webp .subscription::before {
-      background-image: url("../img/disks-tablet@2x.png");
-    }
-  }
+//     .no-webp .subscription::before {
+//       background-image: url("../img/disks-tablet@2x.png");
+//     }
+//   }
 
-  .subscription__center {
-    max-width: none;
-    padding-top: 95px;
-    padding-bottom: 60px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .subscription h2 {
-    font-size: 42px;
-    line-height: 42px;
-    margin-top: 0;
-    margin-bottom: 32px;
-  }
-
-  .subscription__times {
-    margin-bottom: 44px;
-  }
-
-  .subscription__time-item {
-    font-size: 18px;
-    line-height: 27px;
-    margin-right: 54px;
-    padding-bottom: 13px;
-  }
-
-  .subscription__rates-list {
-    display: block;
-    width: 442px;
-    margin: 0 auto;
-  }
-
-  .subscription__rate-item {
-    width: 442px;
-  }
-
-  .subscription__inner div::before {
-    content: "";
-    position: absolute;
-    top: 25px;
-    right: 61px;
-  }
-
-  .subscription__inner div::after {
-    left: 44px;
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .subscription {
-    margin-bottom: 70px;
-  }
-
-  .subscription::before {
-    display: none;
-  }
-
-  .subscription__center {
-    padding-top: 61px;
-    padding-bottom: 35px;
-  }
+//   .subscription__center {
+//     max-width: none;
+//     padding-top: 95px;
+//     padding-bottom: 60px;
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
 
   .subscription h2 {
-    font-size: 32px;
-    line-height: 42px;
-    margin-top: 0;
-    margin-bottom: 20px;
+
+    @include vp-1199 {
+      margin-bottom: -4px;
+    }
+
   }
 
-  .subscription__times {
-    margin-bottom: 34px;
-  }
+//   .subscription__times {
+//     margin-bottom: 44px;
+//   }
 
   .subscription__time-item {
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 45px;
-    padding-bottom: 12px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+      margin-right: 54px;
+      padding-bottom: 13px;
+    }
+
   }
 
-  .subscription__rates-list {
-    width: 290px;
-  }
+//   .subscription__rates-list {
+//     display: block;
+//     width: 442px;
+//     margin: 0 auto;
+//   }
 
-  .subscription__rate-item {
-    width: 290px;
-    margin-bottom: 35px;
-  }
+//   .subscription__rate-item {
+//     width: 442px;
+//   }
 
-  .subscription__inner {
-    padding-top: 42px;
-    padding-bottom: 47px;
-    padding-left: 34px;
-    padding-right: 35px;
-  }
+//   .subscription__inner div::before {
+//     content: "";
+//     position: absolute;
+//     top: 25px;
+//     right: 61px;
+//   }
 
-  .subscription__inner h3 {
-    font-size: 22px;
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
+//   .subscription__inner div::after {
+//     left: 44px;
+//   }
+// }
 
-  .subscription__inner p:first-of-type {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 53px;
-  }
+// @media (max-width: $tablet-width) {
+//   .subscription {
+//     margin-bottom: 70px;
+//   }
 
-  .subscription__inner div {
-    font-size: 48px;
-    line-height: 72px;
-    padding-right: 33px;
-    margin-bottom: 32px;
-  }
+//   .subscription::before {
+//     display: none;
+//   }
 
-  .subscription__inner div::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    right: 36px;
-    width: 24px;
-    height: 33px;
-    background-size: cover;
-  }
+//   .subscription__center {
+//     padding-top: 61px;
+//     padding-bottom: 35px;
+//   }
 
-  .subscription__inner div::after {
-    font-size: 80px;
-    line-height: 120px;
-    left: 22px;
-    top: -45px;
-  }
-}
+//   .subscription h2 {
+//     font-size: 32px;
+//     line-height: 42px;
+//     margin-top: 0;
+//     margin-bottom: 20px;
+//   }
+
+//   .subscription__times {
+//     margin-bottom: 34px;
+//   }
+
+//   .subscription__time-item {
+//     font-size: 16px;
+//     line-height: 24px;
+//     margin-right: 45px;
+//     padding-bottom: 12px;
+//   }
+
+//   .subscription__rates-list {
+//     width: 290px;
+//   }
+
+//   .subscription__rate-item {
+//     width: 290px;
+//     margin-bottom: 35px;
+//   }
+
+//   .subscription__inner {
+//     padding-top: 42px;
+//     padding-bottom: 47px;
+//     padding-left: 34px;
+//     padding-right: 35px;
+//   }
+
+//   .subscription__inner h3 {
+//     font-size: 22px;
+//     line-height: 24px;
+//     margin-bottom: 10px;
+//   }
+
+//   .subscription__inner p:first-of-type {
+//     font-size: 16px;
+//     line-height: 24px;
+//     margin-bottom: 53px;
+//   }
+
+//   .subscription__inner div {
+//     font-size: 48px;
+//     line-height: 72px;
+//     padding-right: 33px;
+//     margin-bottom: 32px;
+//   }
+
+//   .subscription__inner div::before {
+//     content: "";
+//     position: absolute;
+//     top: 22px;
+//     right: 36px;
+//     width: 24px;
+//     height: 33px;
+//     background-size: cover;
+//   }
+
+//   .subscription__inner div::after {
+//     font-size: 80px;
+//     line-height: 120px;
+//     left: 22px;
+//     top: -45px;
+//   }
+// }

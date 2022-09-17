@@ -20,7 +20,10 @@
   display: flex;
   justify-content: space-between;
 }
-.header__logo {
+.header__logo img {
+  @media (max-width: $tablet-width) {
+    width: 82px;
+  }
 }
 
 .header__tel {

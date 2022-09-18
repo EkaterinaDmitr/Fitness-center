@@ -7,6 +7,18 @@
   margin-bottom: 0;
   position: relative;
   overflow: hidden;
+
+  @include vp-1199 {
+    max-width: 678px;
+    padding-bottom: 80px;
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .trainers__control-left {
@@ -20,11 +32,26 @@
   border-top: 16px solid transparent;
   border-right: 16px solid #afafaf;
   border-bottom: 16px solid transparent;
+
+  @include vp-1199 {
+    top: 214px;
+  }
+
+  @include vp-767 {
+    top: 207px;
+    border-right: 10px solid #afafaf;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
 }
 
 .trainers__control-left:hover,
 .trainers__control-left:focus {
   cursor: pointer;
+
+  @include vp-767 {
+    outline: none;
+  }
 }
 
 .trainers__control-left::before {
@@ -37,6 +64,14 @@
   border-top: 16px solid transparent;
   border-right: 16px solid #ffffff;
   border-bottom: 16px solid transparent;
+
+  @include vp-767 {
+    top: -9px;
+    left: 1px;
+    border-top: 9px solid transparent;
+    border-right: 10px solid #ffffff;
+    border-bottom: 9px solid transparent;
+  }
 }
 
 .trainers__control-right {
@@ -49,11 +84,25 @@
   border-top: 16px solid transparent;
   border-left: 16px solid #afafaf;
   border-bottom: 16px solid transparent;
+
+  @include vp-1199 {
+    top: 21px;
+  }
+    @include vp-767 {
+      top: 207px;
+      border-top: 9px solid transparent;
+      border-left: 10px solid #afafaf;
+      border-bottom: 9px solid transparent;
+  }
 }
 
 .trainers__control-right:hover,
 .trainers__control-right:focus {
   cursor: pointer;
+
+  @include vp-767 {
+    outline: none;
+  }
 }
 
 .trainers__control-right::before {
@@ -66,6 +115,14 @@
   border-top: 16px solid transparent;
   border-left: 16px solid #ffffff;
   border-bottom: 16px solid transparent;
+
+  @include vp-767 {
+    top: -9px;
+    right: 1px;
+    border-top: 9px solid transparent;
+    border-left: 10px solid #ffffff;
+    border-bottom: 9px solid transparent;
+  }
 }
 
 .trainers__control-left:hover,
@@ -96,6 +153,11 @@
     margin-bottom: 30px;
     padding: 0;
   }
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 36px;
+  }
 }
 
 .trainers__wrap {
@@ -103,6 +165,13 @@
   box-sizing: border-box;
   margin: 0 auto;
   overflow: hidden;
+
+  @include vp-1199 {
+    max-width: 586px;
+  }
+    @include vp-767 {
+      max-width: 246px;
+  }
 }
 
 .trainers__list {
@@ -114,22 +183,45 @@
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+
+  @include vp-1199 {
+
+  }
 }
 
 .trainers__item {
   width: 260px;
-  height: 294px;
   margin-right: 40px;
   position: relative;
   flex-shrink: 0;
   flex-grow: 0;
   z-index: 2;
+
+  @include vp-1199 {
+    width: 268px;
+    margin-right: 30px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
 }
 
 .trainers__item img {
   width: 260px;
   height: 294px;
   display: block;
+
+  @include vp-1199 {
+    width: 268px;
+    height: 294px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
 }
 
 .trainers__inner {
@@ -143,24 +235,40 @@
   top: 0;
   left: 0;
   right: 0;
+
+  @include vp-1199 {
+    width: 268px;
+    padding-top: 243px;
+  }
+    @include vp-767 {
+      width: 226px;
+      padding-top: 220px;
+  }
 }
 
 .trainers__inner p {
   padding-left: 20px;
   padding-right: 20px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 18px;
   line-height: 27px;
   font-weight: 700;
   color: #ffffff;
   margin-top: 0;
   margin-bottom: -3px;
+
+  @include vp-1199 {
+    padding-left: 13px;
+    margin-top: 0;
+    margin-bottom: -3px;
+  }
+    @include vp-767 {
+      padding-left: 20px;
+  }
 }
 
 .trainers__inner span {
   padding-left: 20px;
   padding-right: 20px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -168,6 +276,15 @@
   margin-top: 0;
   margin-bottom: 32px;
   display: none;
+
+  @include vp-1199 {
+    padding-left: 13px;
+    margin-bottom: 31px;
+  }
+    @include vp-767 {
+      padding-left: 20px;
+      margin-bottom: 32px;
+  }
 }
 
 .trainers__summary-list {
@@ -178,16 +295,26 @@
   padding-left: 70px;
   padding-right: 10px;
   display: none;
+
+  @include vp-1199 {
+    padding-right: 20px;
+  }
+    @include vp-767 {
+      padding-left: 49px;
+  }
 }
 
 .trainers__summary-list li {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #ffffff;
   margin-bottom: 13px;
   position: relative;
+
+  @include vp-1199 {
+
+  }
 }
 
 .trainers__summary-list li::before {
@@ -199,6 +326,10 @@
   height: 6px;
   background: #ffffff;
   border-radius: 50%;
+
+  @include vp-1199 {
+
+  }
 }
 
 .trainers__item:hover {
@@ -208,6 +339,11 @@
 .trainers__item:hover .trainers__inner {
   padding-top: 50px;
   background-color: rgba(16, 38, 84, 0.9);
+
+  @include vp-767 {
+    padding-top: 40px;
+
+  }
 }
 
 .trainers__item:hover span {
@@ -218,148 +354,117 @@
   display: block;
 }
 
-@media (max-width: $desktop-width) {
-  .trainers {
-    max-width: 678px;
-    padding-bottom: 80px;
-    margin-bottom: 10px;
-  }
+// @media (max-width: $desktop-width) {
+//   .trainers {
 
-  .trainers__control-left {
-    top: 218px;
-  }
+//   }
 
-  .trainers__control-right {
-    top: 218px;
-  }
+//   .trainers__control-left {
 
-  .trainers h2 {
+//   }
 
-  }
+//   .trainers__control-right {
 
-  .trainers__wrap {
-    max-width: 586px;
-  }
+//   }
 
-  .trainers__item {
-    width: 268px;
-    margin-right: 30px;
-  }
+//   .trainers h2 {
 
-  .trainers__item img {
-    width: 268px;
-    height: 294px;
-  }
+//   }
 
-  .trainers__inner {
-    width: 268px;
-    padding-top: 243px;
-  }
+//   .trainers__wrap {
 
-  .trainers__inner p {
-    padding-left: 13px;
-    margin-top: 0;
-    margin-bottom: -3px;
-  }
+//   }
 
-  .trainers__inner span {
-    padding-left: 13px;
-    margin-bottom: 31px;
-  }
+//   .trainers__item {
 
-  .trainers__summary-list {
-    padding-right: 20px;
-  }
+//   }
 
-  .trainers__item:hover .trainers__inner {
-    padding-top: 51px;
-  }
-}
+//   .trainers__item img {
 
-@media (max-width: $tablet-width) {
-  .trainers {
-    max-width: 290px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-  }
+//   }
 
-  .trainers__control-left {
-    top: 207px;
-    border-top: 9px solid transparent;
-    border-right: 10px solid #afafaf;
-    border-bottom: 9px solid transparent;
-  }
+//   .trainers__inner {
 
-  .trainers__control-left::before {
-    top: -9px;
-    left: 1px;
-    border-top: 9px solid transparent;
-    border-right: 10px solid #ffffff;
-    border-bottom: 9px solid transparent;
-  }
+//   }
 
-  .trainers__control-right {
-    top: 207px;
-    border-top: 9px solid transparent;
-    border-left: 10px solid #afafaf;
-    border-bottom: 9px solid transparent;
-  }
+//   .trainers__inner p {
 
-  .trainers__control-right::before {
-    top: -9px;
-    right: 1px;
-    border-top: 9px solid transparent;
-    border-left: 10px solid #ffffff;
-    border-bottom: 9px solid transparent;
-  }
+//   }
 
-  .trainers__control-left:focus {
-    outline: none;
-  }
+//   .trainers__inner span {
 
-  .trainers__control-right:focus {
-    outline: none;
-  }
+//   }
 
-  .trainers h2 {
-    font-size: 32px;
-    line-height: 32px;
-    margin-bottom: 36px;
-  }
+//   .trainers__summary-list {
 
-  .trainers__wrap {
-    max-width: 246px;
-  }
+//   }
 
-  .trainers__item {
-    width: 226px;
-    height: 274px;
-  }
+//   .trainers__item:hover .trainers__inner {
+//     padding-top: 51px;
+//   }
+// }
 
-  .trainers__item img {
-    width: 226px;
-    height: 274px;
-  }
+// @media (max-width: $tablet-width) {
+//   .trainers {
 
-  .trainers__inner {
-    width: 226px;
-    padding-top: 220px;
-  }
+//   }
 
-  .trainers__inner p {
-    padding-left: 20px;
-  }
+//   .trainers__control-left {
 
-  .trainers__inner span {
-    padding-left: 20px;
-    margin-bottom: 32px;
-  }
+//   }
 
-  .trainers__summary-list {
-    padding-left: 49px;
-  }
+//   .trainers__control-left::before {
 
-  .trainers__item:hover .trainers__inner {
-    padding-top: 40px;
-  }
-}
+//   }
+
+//   .trainers__control-right {
+
+//   }
+
+//   .trainers__control-right::before {
+
+//   }
+
+//   .trainers__control-left:focus {
+
+//   }
+
+//   .trainers__control-right:focus {
+//     outline: none;
+//   }
+
+//   .trainers h2 {
+
+//   }
+
+//   .trainers__wrap {
+
+//   }
+
+//   .trainers__item {
+
+//   }
+
+//   .trainers__item img {
+
+//   }
+
+//   .trainers__inner {
+
+//   }
+
+//   .trainers__inner p {
+
+//   }
+
+//   .trainers__inner span {
+
+//   }
+
+//   .trainers__summary-list {
+
+//   }
+
+//   .trainers__item:hover .trainers__inner {
+//   }
+// }

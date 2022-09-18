@@ -2,6 +2,10 @@
 .tabs {
   text-align: center;
   padding-top: 34px;
+
+  @include vp-767 {
+    padding-top: 23px;
+  }
 }
 
 .tabs>input[type="radio"] {
@@ -15,6 +19,11 @@
 
   @include vp-1199 {
     padding: 51px 0 53px;
+  }
+
+  @include vp-767 {
+    padding: 34px 0 53px;
+
   }
 }
 
@@ -30,18 +39,19 @@
   border-left: none;
 }
 
-.tabs>input[type="radio"]:checked+label {
-  // background-color: #fff;
-  // border-bottom: 1px solid #fff;
-}
-
-
-.tabs__border::before {
-  content: "";
+.tabs__border {
+  border-bottom: 2px solid rgba(120,120,120,.2);
   position: absolute;
-  width: 26%;
-  height: 2px;
-  background-color: rgba(120,120,120,.2);
-  left: 37%;
-  top: 241px;
+  width: 341px;
+  top: 243px;
+
+  @include vp-1199 {
+    width: 332px;
+    top: 204px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    top: 160px;
+  }
 }

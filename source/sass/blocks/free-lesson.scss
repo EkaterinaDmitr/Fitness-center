@@ -3,25 +3,24 @@
   padding-bottom: 69px;
   background-color: #102654;
 
-  &__wrapper {
-    max-width: 683px;
-    margin-left: auto;
-  }
-
   h3 {
-    // @include pm-zero();
     margin-bottom: 36px;
-    padding: 70px 110px 0 0;
-    // font-family: "Bebas Neue", "Arial Narrow", sans-serif;
-
-    // @include font(49px, 700, 49px);
-    // text-transform: uppercase;
-    // letter-spacing: 0.03em;
+    padding: 70px 0 0 104px;
     color: $white;
+    text-align: start;
   }
 
   @include vp-1199 {
     width: 100%;
+  }
+}
+
+.free-lesson__wrapper {
+  max-width: 683px;
+  margin-left: auto;
+
+  @include vp-1199 {
+    margin: 0 auto;
   }
 }
 
@@ -75,7 +74,7 @@
   button {
     box-sizing: border-box;
 
-    @include button(100%);
+    width: 100%;
     padding-top: 18px;
     padding-bottom: 15px;
 

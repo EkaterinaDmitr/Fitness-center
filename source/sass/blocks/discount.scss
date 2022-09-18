@@ -1,6 +1,6 @@
 
 .discount {
-  padding-top: 114px;
+  padding-top: 121px;
   margin-bottom: 120px;
 
 
@@ -21,6 +21,10 @@
     padding-top: 99px;
     margin-bottom: 100px;
   }
+
+  @include vp-767 {
+    margin-bottom: 70px;
+  }
 }
 
 .discount__wrapper {
@@ -36,13 +40,25 @@
   display: flex;
   width: calc(50% - 20px);
   background-color: #426ddd;
+  max-height: 462px;
 
   @include vp-1199 {
-     width: auto;
+    width: auto;
     margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    max-height: 100%;
+    flex-direction: column;
+    margin-bottom: 31px;
+  }
+
+  picture {
+    display: contents;
 
   }
 }
+
 
 .discount__info {
   display: flex;
@@ -53,9 +69,10 @@
   background-color:#ed0233;
   color: $white;
 
-  // p {
-  //   margin: 0 0 42px 0;
-  // }
+    @include vp-767 {
+      width: 100%;
+      align-items: center;
+    }
 }
 
 .discount__info-text {
@@ -64,6 +81,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
+
+  @include vp-767{
+    text-align: center;
+  }
 }
 
 .discount__info-unit {
@@ -107,6 +128,10 @@
     color: #d10a42;
     border-color: #d10a42;
   }
+
+  @include vp-767 {
+    padding-top: 10px;
+  }
 }
 
 .discount__more--year {
@@ -132,6 +157,10 @@
     display: flex;
     justify-content: space-between;
     width: auto;
+  }
+
+  @include vp-767 {
+    display: block;
   }
 }
 
@@ -178,6 +207,14 @@
     }
   }
 
+  @include vp-767 {
+    align-items: center;
+    width: auto;
+    margin: 0 0 30px 0;
+    padding: 36px 35px 37px;
+    text-align: center;
+  }
+
 
 }
 
@@ -185,12 +222,22 @@
   flex: 1;
   margin: 0;
   width: 100%;
-
+  object-position: top;
+  object-fit: cover;
   // img {
   //   width: 100%;
   //   height: 100%;
   //   object-fit: cover;
   // }
+
+  @include vp-1199 {
+    object-position: top;
+    object-fit: cover;
+  }
+
+  @include vp-767 {
+    max-height: 299px;
+  }
 }
 
 /* tablet */
@@ -255,16 +302,11 @@
 //   }
 
 //   .discount__offer {
-//     display: block;
+
 //   }
 
 //   .discount__offer-wrapper {
-//     align-items: center;
-//     width: auto;
-//     margin: 0 0 30px 0;
-//     padding-top: 37px;
-//     padding-bottom: 37px;
-//     text-align: center;
+
 //   }
 
 //   .discount__offer-info {

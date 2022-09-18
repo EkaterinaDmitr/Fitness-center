@@ -1,5 +1,5 @@
 .subscription {
-  background: #f8f9fc;
+  background: $bg-color;
   margin-bottom: 120px;
   position: relative;
   padding-top: 119px;
@@ -8,6 +8,11 @@
   @include vp-1199 {
     padding-top: 95px;
     margin-bottom: 54px;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    margin-bottom: 7px;
   }
 }
 
@@ -31,6 +36,10 @@
     height: 444px;
     background-size: cover;
     background-image: url("../../img/disks-tablet@1x.png");
+  }
+
+  @include vp-767 {
+    display: none;
   }
 
 }
@@ -58,26 +67,6 @@
   padding-bottom: 80px;
 }
 
-// .subscription h2 {
-//   font-family: "Bebas Neue", "Arial", sans-serif;
-//   font-size: 49px;
-//   line-height: 49px;
-//   font-weight: 700;
-//   color: #102654;
-//   text-transform: uppercase;
-//   letter-spacing: 0.03em;
-//   margin: auto;
-//   text-align: center;
-//   margin-top: 0;
-//   margin-bottom: 38px;
-// }
-
-// .subscription__times {
-//   display: flex;
-//   justify-content: center;
-//   margin-bottom: 38px;
-// }
-
 .subscription__times-list {
   list-style: none;
   margin: 0;
@@ -100,18 +89,24 @@
 
 .subscription__time-item {
   position: relative;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
-  color: #787878;
-  margin-right: 47px;
+  color: rgba(16, 38, 84, 0.5);
+  margin-right: 42px;
   padding-bottom: 15px;
   outline: none;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 40px;
+    padding-bottom: 16px;
+  }
 }
 
 .subscription__time-item:hover {
-  color: #102654;
+  color: $text-color;
 }
 
 .subscription__time-item:focus {
@@ -124,13 +119,11 @@
 
 .subscription__time-item:hover,
 .subscription__time-item:focus {
-  border-bottom: 2px solid #d10a42;
+  border-bottom: 2px solid $active-red;
   cursor: pointer;
 }
 
 .subscription__rates-list {
-  // width: 1160px;
-  // margin: auto;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -148,7 +141,7 @@
   box-sizing: border-box;
   margin-right: 40px;
   margin-bottom: 40px;
-  background: #ffffff;
+  background: $white;
   padding: 7px;
   position: relative;
   z-index: 1;
@@ -157,6 +150,11 @@
     width: 442px;
     margin-right: 0;
     margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    margin-bottom: 37px;
   }
 }
 
@@ -177,40 +175,61 @@
   @include vp-1199 {
     padding: 45px 70px 60px 69px;
   }
+
+  @include vp-767 {
+    padding-top: 42px;
+    padding-bottom: 47px;
+    padding-left: 34px;
+    padding-right: 35px;
+  }
 }
 
 .subscription__inner h3 {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 26px;
   line-height: 29px;
   font-weight: 700;
-  color: #102654;
+  color: $text-color;
   margin-top: 0;
   margin-bottom: 10px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
 }
 
 .subscription__inner p:first-of-type {
   display: block;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #495a7d;
+  color: $grey-blue;
   margin-top: 0;
   margin-bottom: 65px;
+
+  @include vp-767 {
+    margin-bottom: 55px;
+  }
 }
 
 .subscription__inner div {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 60px;
   line-height: 90px;
   font-weight: 700;
-  color: #103aae;
+  color: $blue;
   padding-right: 44px;
   margin-top: 0;
   margin-bottom: 35px;
   position: relative;
   z-index: 2;
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+    padding-right: 33px;
+    margin-bottom: 29px;
+  }
 }
 
 .subscription__inner div::before {
@@ -222,6 +241,18 @@
   height: 42px;
   z-index: 2;
   background: url("../img/icon-cureency.svg") 50% 50% no-repeat;
+
+  @include vp-1199 {
+    right: 61px;
+  }
+
+  @include vp-767 {
+    background-size: contain;
+    top: 20px;
+    right: 35px;
+    width: 24px;
+    height: 33px;
+  }
 }
 
 .subscription__inner div::after {
@@ -232,6 +263,17 @@
   font-size: 100px;
   line-height: 150px;
   color: rgba(232, 232, 232, 0.48);
+
+  @include vp-1199 {
+    left: 42px;
+  }
+
+  @include vp-767 {
+    font-size: 80px;
+    line-height: 120px;
+    left: 22px;
+    top: -45px;
+  }
 }
 
 .subscription__inner span {
@@ -312,10 +354,7 @@
 //   }
 
 //   .subscription__inner div::before {
-//     content: "";
-//     position: absolute;
-//     top: 25px;
-//     right: 61px;
+
 //   }
 
 //   .subscription__inner div::after {
@@ -349,10 +388,7 @@
 //   }
 
 //   .subscription__time-item {
-//     font-size: 16px;
-//     line-height: 24px;
-//     margin-right: 45px;
-//     padding-bottom: 12px;
+
 //   }
 
 //   .subscription__rates-list {
@@ -360,21 +396,16 @@
 //   }
 
 //   .subscription__rate-item {
-//     width: 290px;
+
 //     margin-bottom: 35px;
 //   }
 
 //   .subscription__inner {
-//     padding-top: 42px;
-//     padding-bottom: 47px;
-//     padding-left: 34px;
-//     padding-right: 35px;
+
 //   }
 
 //   .subscription__inner h3 {
-//     font-size: 22px;
-//     line-height: 24px;
-//     margin-bottom: 10px;
+
 //   }
 
 //   .subscription__inner p:first-of-type {
@@ -384,10 +415,7 @@
 //   }
 
 //   .subscription__inner div {
-//     font-size: 48px;
-//     line-height: 72px;
-//     padding-right: 33px;
-//     margin-bottom: 32px;
+
 //   }
 
 //   .subscription__inner div::before {
@@ -401,9 +429,6 @@
 //   }
 
 //   .subscription__inner div::after {
-//     font-size: 80px;
-//     line-height: 120px;
-//     left: 22px;
-//     top: -45px;
+
 //   }
 // }

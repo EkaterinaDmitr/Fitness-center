@@ -1,28 +1,28 @@
-.page-header {
+.header {
   padding: 28px 0 51px;
   margin-bottom: 120px;
-  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 
   @include vp-1199 {
     padding: 40px 0 82px;
     margin-bottom: 101px;
-    background: conic-gradient(from 139.4deg at 20.7% 35.74%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+    background: conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
 
   @include vp-767 {
-    padding: 26px 0 80px;
+    padding: 17px 0 75px;
     margin-bottom: 70px;
-    background: conic-gradient(from 171.43deg at 35.31% 34.22%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+    background: conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
 }
 
-.page-header__top {
+.header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.page-header__logo img {
+.header__logo img {
   width: 89px;
   height: 20px;
 
@@ -37,7 +37,7 @@
   }
 }
 
-.page-header__phone a {
+.header__phone a {
   font-family: $bebasNeue;
   font-size: 26px;
   font-weight: 700;
@@ -62,7 +62,7 @@
   }
 }
 
-.page-header__banner {
+.header__banner {
   display: flex;
 
   @include vp-1199 {
@@ -74,7 +74,7 @@
   }
 }
 
-.page-header__banner img {
+.header__banner img {
   margin-top: -3px;
   object-fit: cover;
 
@@ -89,7 +89,7 @@
   }
 }
 
-.page-header__banner-wrapper {
+.header__banner-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -104,7 +104,7 @@
   }
 }
 
-.page-header__banner-wrapper p {
+.header__banner-wrapper p {
   margin: 0 64px 8px 0;
   order: -1;
   font-family: $bebasNeue;
@@ -128,7 +128,7 @@
   }
 }
 
-.page-header__banner-text {
+.header__banner-text {
   position: relative;
   margin-bottom: 56px;
 
@@ -141,7 +141,7 @@
   }
 }
 
-.page-header__banner-text h2 {
+.header__banner-text h2 {
   margin: 0 64px 0 98px;
   max-width: 298px;
   font-family: $bebasNeue;
@@ -152,7 +152,7 @@
   color: $white;
   text-align: right;
   text-transform: uppercase;
-  text-shadow: 0px 3px $white;
+  text-shadow: 0 3px $white;
 
   @include vp-1199 {
     margin: 0 29px 0 27px;
@@ -167,7 +167,7 @@
   }
 }
 
-.page-header__banner-text ul {
+.header__banner-text ul {
   position: absolute;
   left: 20px;
   bottom: 28px;
@@ -185,7 +185,7 @@
   }
 }
 
-.page-header__banner-text li {
+.header__banner-text li {
   font-family: $robotoCondensed;
   font-size: 14px;
   line-height: 21px;
@@ -193,8 +193,8 @@
   color: $white;
 }
 
-.page-header__banner-social {
-  margin: auto -5px 0 auto ;
+.header__banner-social {
+  margin: auto -5px 0 auto;
   padding-bottom: 26px;
   text-transform: uppercase;
 
@@ -203,17 +203,17 @@
   }
 }
 
-.page-header__banner-social ul {
+.header__banner-social ul {
   margin: 0;
   list-style: none;
 }
 
-.page-header__banner-social li {
+.header__banner-social li {
   margin-bottom: 11px;
   text-align: right;
 }
 
-.page-header__banner-social a {
+.header__banner-social a {
   padding: 5px;
   font-size: 12px;
   line-height: 14px;
@@ -226,7 +226,7 @@
   }
 }
 
-.page-header__button {
+.header__button {
   margin-left: auto;
   margin-right: 64px;
   padding-top: 20px;
@@ -250,44 +250,3 @@
     width: 100%;
   }
 }
-
-
-// .header {
-//   margin-bottom: 120px;
-
-//   @include vp-1199 {
-//     margin-bottom: 99px;
-//   }
-// }
-// .header__wrapper {
-//   min-height: 658px;
-//   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
-//   padding: 30px 0;
-
-//   @include vp-1199 {
-//     min-height: 554px;
-//     padding: 41px 0;
-//   }
-// }
-
-// .header__headline {
-//   display: flex;
-//   justify-content: space-between;
-// }
-// .header__logo img {
-//   @media (max-width: $tablet-width) {
-//     width: 82px;
-//   }
-// }
-
-// .header__tel {
-//   font-family: $bebasNeue;
-//   font-size: 26px;
-//   line-height: 26px;
-//   letter-spacing: 0.04em;
-//   color: $white;
-
-//   @include vp-1199 {
-//     font-size: 24px;
-//   }
-// }

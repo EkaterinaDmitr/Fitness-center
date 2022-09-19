@@ -1,9 +1,8 @@
 .about {
   padding-bottom: 235px;
 
-
   @include vp-1199 {
-    margin-bottom: 109px;
+    margin-bottom: 105px;
   }
 
   @include vp-767 {
@@ -78,9 +77,11 @@
   margin: 3px 0 39px;
   font-size: 18px;
   line-height: 150%;
+  font-weight: 400;
 
   @include vp-1199 {
     margin-bottom: 35px;
+    margin-top: 6px;
   }
 
   @include vp-767 {
@@ -137,95 +138,3 @@
     width: 320px;
   }
 }
-
-
-// .gym-block {
-//   display: flex;
-//   justify-content: space-between;
-//   min-height: 637px;
-
-//   @include vp-1199 {
-//     flex-direction: column;
-//     align-items: center;
-//     min-height: 760px;
-//     justify-content: flex-start;
-//   }
-// }
-
-// .gym-block__text {
-//   max-width: 355px;
-//   font-family: $robotoCondensed;
-//   color: $text-color;
-//   margin-left: 60px;
-//   margin-top: 51px;
-
-//   h2 {
-//     margin-left: -33px;
-
-//     @include vp-1199 {
-//       margin: 0 0 8px;
-//     }
-//   }
-
-//   h3 {
-//     font-weight: 400;
-//     font-size: 18px;
-//     line-height: 150%;
-//     margin: 0 0 43px;
-
-//     @include vp-1199 {
-//       margin: 0 0 35px
-//     }
-//   }
-
-//   p {
-//     font-style: normal;
-//     font-weight: 300;
-//     font-size: 16px;
-//     line-height: 150%;
-//     margin: 0 0 7px;
-
-//     @include vp-1199 {
-//       text-align: center;
-//     }
-//   }
-
-//   @include vp-1199 {
-//     max-width: 502px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     margin: 0 0 37px;
-
-//     p:last-child {
-//       display: none;
-//     }
-//   }
-// }
-
-// .gym-block__image {
-//   position: relative;
-
-//   @include vp-1199 {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
-// }
-
-// .gym-block__img {
-//   @include vp-1199 {
-//     width: 768px;
-//   }
-// }
-
-// .gym-block__video {
-//   position: absolute;
-//   top: 38%;
-//   left: -10%;
-
-//   @include vp-1199 {
-//     top: 65%;
-//     left: 25%;
-//   }
-// }

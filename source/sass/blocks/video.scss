@@ -21,25 +21,6 @@
   object-fit: cover;
   cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    background-image: url("../img/play.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-
-    @include vp-1199 {
-      width: 73px;
-      height: 73px;
-    }
-  }
-
   &:hover,
   &:focus {
     &::before {
@@ -51,6 +32,25 @@
         height: 90px;
       }
     }
+  }
+}
+
+.video__link::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/play.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
   }
 }
 

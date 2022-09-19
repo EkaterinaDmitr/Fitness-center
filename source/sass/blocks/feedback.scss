@@ -1,14 +1,17 @@
 .feedback {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
 
   @include vp-1199 {
-
     flex-direction: column;
-    margin-bottom: 40px;
   }
 }
 
+.feedback__free-lesson {
+  width: 50%;
+  color: $white;
+  background-color: $text-color;
 
+  @include vp-1199 {
+    width: 100%;
+  }
+}

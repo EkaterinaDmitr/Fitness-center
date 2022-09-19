@@ -78,10 +78,16 @@
   justify-content: flex-start;
   column-gap: 30px;
 
+  @include vp-1199 {
+    justify-content: flex-end;
+  }
+
   @include vp-767 {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
+    padding-right: 44px;
+    padding-left: 44px;
   }
 }
 
@@ -95,7 +101,6 @@
 
 .advantages h3 {
   margin: 0 0 6px;
-  margin-bottom: 6px;
   font-family: $robotoCondensed;
   font-weight: 700;
   font-size: 22px;
@@ -120,8 +125,7 @@
   font-size: 71px;
   font-weight: 700;
   line-height: 84px;
-  background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);;
-  -webkit-background-clip: text;
+  background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
@@ -132,7 +136,6 @@
 
   @include vp-767 {
     background: linear-gradient(-377.51deg, #0041ca 39%, #d10a42 71.33%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
@@ -146,158 +149,151 @@
   color: $blue-text;
 }
 
-.advantages li {
-  @include vp-767 {
-    padding-right: 44px;
-    padding-left: 44px;
+.advantages li:nth-child(5n + 1) {
+  grid-area: s;
+
+  & .advantages__item-figures {
+    margin-left: 7px;
   }
-  &:nth-child(5n + 1) {
-    grid-area: s;
 
-    & .advantages__item-figures {
-      margin-left: 7px;
-    }
+  & strong {
+    background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
-    & strong {
-      background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);;
-      -webkit-background-clip: text;
+    @include vp-767 {
+      background: linear-gradient(-377.51deg, #0041ca 53%, #d10a42 71.33%);
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+  }
+}
 
-      @include vp-767 {
-        background: linear-gradient(-377.51deg, #0041ca 53%, #d10a42 71.33%);;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
+.advantages li:nth-child(5n + 2) {
+  grid-area: p;
+
+  @include vp-1199 {
+    p {
+      padding-right: 5px;
+    }
+  }
+}
+
+.advantages li:nth-child(5n + 3) {
+  position: relative;
+  margin: 18px 0 5px -3px;
+  padding: 35px 35px;
+  flex-direction: column;
+  grid-area: t;
+  width: 240px;
+  min-height: 307px;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  background-color: $dark-blue;
+
+  @include vp-1199 {
+    margin: 0 auto -10px;
+    padding: 38px;
+    left: 4px;
+    width: 442px;
+    min-height: 239px;
+
+    p {
+      width: 172px;
     }
   }
 
-  &:nth-child(5n + 2) {
-    grid-area: p;
+  @include vp-767 {
+    margin-bottom: 24px;
+    top: 18px;
+    left: 0;
+    width: 100%;
+  }
+}
 
-    @include vp-1199 {
-      & p {
-        padding-right: 5px;
-      }
-    }
+.advantages li:nth-child(5n + 3) h3 {
+  margin: 18px 0 12px -4px;
+  font-size: 74px;
+  font-weight: 700;
+  line-height: 75px;
+
+  @include vp-1199 {
+    margin-top: -5px;
+    margin-bottom: 9px;
   }
 
-  &:nth-child(5n + 3) {
-    position: relative;
-    margin: 18px 0 5px -3px;
-    padding: 35px 35px;
-    flex-direction: column;
-    grid-area: t;
-    width: 240px;
-    min-height: 307px;
-    align-items: center;
-    text-align: center;
-    color: $white;
-    background-color: $dark-blue;
+  @include vp-767 {
+    margin-top: -8px;
+    margin-bottom: 4px;
+  }
+}
 
-    @include vp-1199 {
-      margin: 0 auto -10px;
-      padding: 38px;
-      left: 4px;
-      width: 442px;
-      min-height: 239px;
+.advantages li:nth-child(5n + 3) span {
+  display: block;
+  margin-bottom: 34px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  color: $white;
 
-      & p {
-        width: 172px;
-      }
-    }
-
-    @include vp-767 {
-      margin-bottom: 24px;
-      top: 18px;
-      left: 0;
-      width: 100%;
-    }
-
-    & h3 {
-      margin: 18px 0 12px -4px;
-      font-size: 74px;
-      font-weight: 700;
-      line-height: 75px;
-
-      @include vp-1199 {
-        margin-top: -5px;
-        margin-bottom: 9px;
-      }
-
-      @include vp-767 {
-        margin-top: -8px;
-        margin-bottom: 4px;
-      }
-    }
-
-    & span {
-      display: block;
-      margin-bottom: 34px;
-      font-weight: 700;
-      font-size: 26px;
-      line-height: 39px;
-      color: $white;
-
-      @include vp-1199 {
-        margin-bottom: 16px;
-        font-size: 22px;
-        line-height: 33px;
-      }
-
-      @include vp-767 {
-        margin-bottom: 11px;
-      }
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 153px;
-      width: 340px;
-      height: 2px;
-      background-color: $active-red;
-      opacity: 0.2;
-
-      @include vp-1199 {
-        display: none;
-      }
-    }
-
-    &::before {
-      right: 301px;
-    }
-
-    &::after {
-      left: 301px;
-    }
+  @include vp-1199 {
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 33px;
   }
 
-  &:nth-child(5n + 4) {
-    grid-area: c;
+  @include vp-767 {
+    margin-bottom: 11px;
+  }
+}
 
-    @include vp-1199 {
-      margin-left: 8px;
-    }
+.advantages li:nth-child(5n + 3)::before,
+.advantages li:nth-child(5n + 3)::after {
+  content: "";
+  position: absolute;
+  bottom: 153px;
+  width: 340px;
+  height: 2px;
+  background-color: $active-red;
+  opacity: 0.2;
 
-    @include vp-767 {
-      margin-left: 0;
-      padding-left: 46px;
-      padding-right: 46px;
-    }
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.advantages li:nth-child(5n + 3)::before {
+  right: 301px;
+}
+
+.advantages li:nth-child(5n + 3)::after {
+  left: 301px;
+}
+
+
+.advantages li:nth-child(5n + 4) {
+  grid-area: c;
+
+  @include vp-1199 {
+    margin-left: 8px;
   }
 
-  &:nth-child(5n + 5) {
-    grid-area: y;
+  @include vp-767 {
+    margin-left: 0;
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+}
 
-    @include vp-1199 {
-      margin-right: -5px;
-    }
+.advantages li:nth-child(5n + 5) {
+  grid-area: y;
 
-    @include vp-767 {
-      margin-right: 0;
-    }
+  @include vp-1199 {
+    margin-right: -5px;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
   }
 }

@@ -1,3 +1,6 @@
+/* eslint-disable camelcase */
+/* eslint-disable no-invalid-this */
+/* eslint-disable no-unused-expressions */
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
@@ -65,7 +68,6 @@ let reviewWidth;
 let reviewPosition;
 const reviewCount = 1;
 
-// Определение ширины элементов в зависимости от экрана
 const screenWidthDetection = function () {
   if (trainers) {
     trainersList.style.marginLeft = 0 + 'px';
@@ -74,33 +76,31 @@ const screenWidthDetection = function () {
     reviewsList.style.marginLeft = 0 + 'px';
   }
   if (window.matchMedia('(min-width: 320px)').matches) {
-    trainerWidth = 256; // 226px + 30px
+    trainerWidth = 256;
     trainerCount = 1;
     trainerPosition = 0;
-    reviewWidth = 266; // 246px + 20px
+    reviewWidth = 266;
     reviewPosition = 0;
   }
 
   if (window.matchMedia('(min-width: 768px)').matches) {
-    trainerWidth = 298; // 266px + 30px
+    trainerWidth = 298;
     trainerCount = 2;
     trainerPosition = 0;
-    reviewWidth = 606; // 566px + 40px
+    reviewWidth = 606;
     reviewPosition = 0;
   }
 
   if (window.matchMedia('(min-width: 1200px)').matches) {
-    trainerWidth = 300; // 260px + 40px
+    trainerWidth = 300;
     trainerCount = 4;
     trainerPosition = 0;
-    reviewWidth = 600; // 560px + 40px
+    reviewWidth = 600;
     reviewPosition = 0;
   }
 };
 
-// Если блок тренеров сущесвует на странице
 if (trainers) {
-  // Предыдущий тренер
   const prevTrainerItem = function () {
     trainerPosition = Math.min(trainerPosition, 0);
     if (trainerPosition === 0) {
@@ -114,7 +114,6 @@ if (trainers) {
     }
   };
 
-  // Следующий тренер
   const nextTrainerItem = function () {
     trainerPosition = Math.max(trainerPosition, -trainerWidth * (trainerItemsAll.length - trainerCount));
     if (trainerPosition === -trainerWidth * (trainerItemsAll.length - trainerCount)) {
@@ -128,11 +127,9 @@ if (trainers) {
     }
   };
 
-  // Клики на контролах
   trainerPrev.addEventListener('click', prevTrainerItem);
   trainerNext.addEventListener('click', nextTrainerItem);
 
-  // Нажатия Enter на контролах
   trainerPrev.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 13) {
       prevTrainerItem();
@@ -146,9 +143,7 @@ if (trainers) {
   });
 }
 
-// Если блок отзывов существует на странице
 if (reviews) {
-  // Предыдущий отзыв
   const prevReviewItem = function () {
     reviewPosition = Math.min(reviewPosition, 0);
     if (reviewPosition === 0) {
@@ -163,7 +158,6 @@ if (reviews) {
 
   };
 
-  // Следующий отзыв
   const nextReviewItem = function () {
     reviewPosition = Math.max(reviewPosition, -reviewWidth * (reviewsItemsAll.length - reviewCount));
     if (reviewPosition === -reviewWidth * (reviewsItemsAll.length - reviewCount)) {
@@ -177,11 +171,9 @@ if (reviews) {
     }
   };
 
-  // Клики на контролах
   reviewsPrev.addEventListener('click', prevReviewItem);
   reviewsNext.addEventListener('click', nextReviewItem);
 
-  // Нажатия Enter на контролах
   reviewsPrev.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 13) {
       prevReviewItem();
@@ -196,27 +188,57 @@ if (reviews) {
 }
 
 
-// Переопределение ширины элементов при изменении экрана
 window.addEventListener('resize', function () {
   screenWidthDetection();
 });
 
-// // Маска номера телефона
-// const telOptions = {
-//   mask: '+{7}(000)000-00-00'
-// };
 
-// if (telNumber) {
-//   const iMask;
-//   iMask(telNumber, telOptions);
-// }
+[].forEach.call(
+    document.querySelectorAll('input[type="tel"]'),
+    function (input) {
+      let keyCode;
+      function mask(event) {
+        event.keyCode && (keyCode = event.keyCode);
+        let pos = this.selectionStart;
+        if (pos < 3) {
+          event.preventDefault();
+        }
+        // eslint-disable-next-line one-var
+        let matrix = '+7 (___) ___ ____',
+          i = 0,
+          def = matrix.replace(/\D/g, ''),
+          val = this.value.replace(/\D/g, ''),
+          new_value = matrix.replace(/[_\d]/g, function (a) {
+            return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+          });
+        i = new_value.indexOf('_');
+        if (i !== -1) {
+          i < 5 && (i = 3);
+          new_value = new_value.slice(0, i);
+        }
+        let reg = matrix
+            .substr(0, this.value.length)
+            .replace(/_+/g, function (a) {
+              return '\\d{1,' + a.length + '}';
+            })
+            .replace(/[+()]/g, '\\$&');
+        reg = new RegExp('^' + reg + '$');
+        if (
+          !reg.test(this.value) ||
+        this.value.length < 5 ||
+        (keyCode > 47 && keyCode < 58)
+        ) {
+          this.value = new_value;
+        }
+        if (event.type === 'blur' && this.value.length < 5) {
+          this.value = '';
+        }
+      }
 
-// if (buyLink) {
-//   buyLink.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     buyAnchor.scrollIntoView({block: 'start', behavior: 'smooth'});
-//   });
-// }
+      input.addEventListener('input', mask, false);
+      input.addEventListener('blur', mask, false);
+      input.addEventListener('focus', mask, false);
+    }
+);
 
-// Основной код
 screenWidthDetection();

@@ -24,17 +24,13 @@
 
   @include vp-1199 {
     width: 292px;
-    padding-top: 45px;
-    padding-bottom: 50px;
-    padding-left: 45px;
-    padding-right: 30px;
+    padding: 45px 30px 50px 45px;
     margin-right: 0;
   }
 
   @include vp-767 {
     width: 290px;
-    padding-left: 44px;
-    padding-right: 30px;
+    padding: 45px 30px 48px 44px;
     margin-right: 0;
   }
 }
@@ -45,10 +41,6 @@
 
   @include vp-1199 {
     margin-bottom: 1px;
-  }
-
-    @include vp-767 {
-
   }
 }
 
@@ -69,10 +61,6 @@
     width: 300px;
     margin: 6px 30px -11px 0;
   }
-
-    @include vp-767 {
-
-  }
 }
 
 .games__scedule {
@@ -84,10 +72,6 @@
     width: 100%;
     padding-top: 1px;
   }
-
-    @include vp-767 {
-
-  }
 }
 
 .games__date {
@@ -95,10 +79,6 @@
 
   @include vp-1199 {
     margin-bottom: 0;
-  }
-
-    @include vp-767 {
-
   }
 }
 
@@ -113,17 +93,13 @@
     font-size: 12px;
     line-height: 18px;
   }
-
-    @include vp-767 {
-
-  }
 }
 
 .games__date-title::before {
   content: "";
   width: 64px;
   height: 1px;
-  background: #ffffff;
+  background: $white;
   position: absolute;
   bottom: -7px;
   left: 0;
@@ -132,10 +108,6 @@
     width: 42px;
     height: 1px;
     bottom: -3px;
-  }
-
-    @include vp-767 {
-
   }
 }
 
@@ -154,11 +126,6 @@
     line-height: 36px;
     margin-right: 4px;
   }
-
-    @include vp-767 {
-
-  }
-
 }
 
 .games__month-year {
@@ -174,10 +141,6 @@
     width: 40px;
     padding-top: 5px;
   }
-
-    @include vp-767 {
-
-  }
 }
 
 .games__time-title {
@@ -190,10 +153,6 @@
     line-height: 18px;
     margin-bottom: -3px;
   }
-
-    @include vp-767 {
-
-  }
 }
 
 .games__time-title::before {
@@ -201,7 +160,7 @@
   position: absolute;
   bottom: -7px;
   left: 0;
-  background: #ffffff;
+  background: $white;
   width: 88px;
   height: 1px;
 
@@ -209,10 +168,6 @@
     bottom: -2px;
     left: 0;
     width: 56px;
-  }
-
-    @include vp-767 {
-
   }
 }
 
@@ -225,16 +180,12 @@
     font-size: 24px;
     line-height: 36px;
   }
-
-    @include vp-767 {
-
-  }
 }
 
 .games p {
   font-size: 18px;
   line-height: 27px;
-  color: #ffffff;
+  color: $white;
   margin-top: 0;
   margin-bottom: 47px;
 
@@ -242,10 +193,6 @@
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 31px;
-  }
-
-    @include vp-767 {
-
   }
 }
 

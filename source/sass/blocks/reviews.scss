@@ -1,444 +1,49 @@
-
-// @mixin font($size, $weight, $line-height) {
-//   font-size: $size;
-//   font-weight: $weight;
-//   line-height: $line-height;
-// }
-
-// @mixin pm-zero($margin: 0, $padding: 0) {
-//   margin: $margin;
-//   padding: $padding;
-// }
-
-// @mixin button($width: 234px) {
-//   box-sizing: border-box;
-//   width: $width;
-//   padding-top: 20px;
-//   padding-right: 52px;
-//   padding-bottom: 19px;
-//   padding-left: 53px;
-
-//   border: 4px solid $white;
-//   border-radius: 0;
-
-//   @include font(12px, 700, 14px);
-//   text-align: center;
-//   text-transform: uppercase;
-//   letter-spacing: 0.05em;
-//   color: $white;
-
-//   background-color: transparent;
-// }
-
-// .reviews {
-//   position: relative;
-//   margin-bottom: 120px;
-
-//   @include vp-1199 {
-//     margin-bottom: 100px;
-//     width: 678px;
-//   }
-
-//   @include vp-767 {
-//     width: 290px;
-//     margin-bottom: 50px;
-//   }
-// }
-
-// .reviews h2 {
-//   margin-bottom: 50px;
-
-//   @include vp-1199 {
-//     margin-bottom: 41px;
-//     font-size: 42px;
-//     line-height: 42px;
-//   }
-
-//   @include vp-767 {
-//     font-size: 32px;
-//     line-height: 32px;
-//     margin-bottom: 26px;
-//   }
-// }
-// //   font-family: "Bebas Neue", "Arial", sans-serif;
-// //   font-size: 49px;
-// //   line-height: 49px;
-// //   font-weight: 700;
-// //   color: #102654;
-// //   text-transform: uppercase;
-// //   letter-spacing: 0.03em;
-// //   text-align: center;
-// //   margin-top: 0;
-// //   margin-bottom: 36px;
-// // }
-
-// .reviews__wrap {
-//   width: 560px;
-//   margin: 0 auto;
-//   box-sizing: border-box;
-//   overflow: hidden;
-//   background: $text-color;
-//   box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
-
-//   @include vp-1199 {
-//     width: 606px;
-//   }
-
-//   @include vp-767 {
-//     width: 266px;
-//   }
-// }
-
-// .reviews__list {
-//   margin: 0 auto;
-//   padding: 0;
-//   list-style: none;
-//   display: flex;
-
-//   @include vp-1199 {
-
-//   }
-
-//   @include vp-767 {
-
-//   }
-// }
-
-// .reviews__item {
-//   width: 560px;
-//   margin-right: 40px;
-//   display: flex;
-//   flex-shrink: 0;
-//   padding: 53px 58px 56px 62px;
-
-//   @include vp-1199 {
-//     width: 566px;
-//     padding-top: 53px;
-//     padding-bottom: 56px;
-//     padding-left: 65px;
-//     padding-right: 62px;
-//   }
-
-//   @include vp-767 {
-//     width: 226px;
-//     padding-top: 47px;
-//     padding-bottom: 36px;
-//     padding-left: 25px;
-//     padding-right: 25px;
-//     position: relative;
-//     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-//   }
-// }
-
-// .reviews__item img {
-//   width: 80px;
-//   height: 80px;
-//   border-radius: 50%;
-//   flex-shrink: 0;
-//   margin-top: 9px;
-//   margin-right: 29px;
-//   background: #1c3374;
-//     @include vp-1199 {
-
-//   }
-
-//   @include vp-767 {
-//     width: 68px;
-//     height: 68px;
-//     position: absolute;
-//     top: 31px;
-//     left: 41px;
-//   }
-// }
-
-// .reviews__item h3 {
-//   font-size: 20px;
-//   line-height: 30px;
-//   font-weight: 700;
-//   color: $white;
-//   margin-top: 0;
-//   margin-bottom: 11px;
-//     @include vp-1199 {
-
-//   }
-
-//   @include vp-767 {
-//     padding-left: 99px;
-//     line-height: 26px;
-//     margin-bottom: 24px;
-//   }
-// }
-
-// .reviews__item p {
-//   font-size: 16px;
-//   line-height: 23px;
-//   font-weight: 400;
-//   color: $white;
-//   margin-top: 0;
-//   margin-bottom: 0;
-//     @include vp-1199 {
-
-//   }
-
-//   @include vp-767 {
-//     margin-bottom: 0;
-//     text-align: center;
-//     line-height: 22px;
-//   }
-// }
-
-// .reviews__inner {
-//   width: 330px;
-//     @include vp-1199 {
-
-//   }
-
-//   @include vp-767 {
-
-//   }
-// }
-
-// .reviews__control-left::before {
-//   content: "";
-//   background-image: url("../../img/icon-left.svg");
-//   background-repeat: no-repeat;
-//   width: 16px;
-//   height: 32px;
-//   position: absolute;
-//   right: 1004px;
-//   top: 203px;
-
-// }
-
-// .reviews__control-right::before {
-//   content: "";
-//   background-image: url("../../img/icon-right.svg");
-//   background-repeat: no-repeat;
-//   width: 18px;
-//   height: 32px;
-//   position: absolute;
-//   right: 25%;
-//   top: 203px;
-// }
-
-// // .reviews__control-left {
-// //   position: absolute;
-// //   top: 210px;
-// //   left: 0;
-// //   border-top: 16px solid transparent;
-// //   border-right: 16px solid #afafaf;
-// //   border-bottom: 16px solid transparent;
-
-// //   @include vp-1199 {
-// //     top: 190px;
-// //     left: 46px;
-
-// //   }
-
-// //   @include vp-767 {
-// //     top: 236px;
-// //     border-top: 9px solid transparent;
-// //     border-right: 10px solid #afafaf;
-// //     border-bottom: 9px solid transparent;
-// //   }
-// // }
-
-// // .reviews__control-left:hover,
-// // .reviews__control-left:focus {
-// //   cursor: pointer;
-// // }
-
-// // .reviews__control-left::before {
-// //   content: "";
-// //   position: absolute;
-// //   top: -16px;
-// //   left: 1px;
-// //   width: 0;
-// //   height: 0;
-// //   border-top: 16px solid transparent;
-// //   border-right: 16px solid #ffffff;
-// //   border-bottom: 16px solid transparent;
-
-// //   @include vp-767 {
-// //     top: -9px;
-// //     left: 1px;
-// //     border-top: 9px solid transparent;
-// //     border-right: 10px solid #ffffff;
-// //     border-bottom: 9px solid transparent;
-// //   }
-// // }
-
-// // .reviews__control-right {
-// //   position: absolute;
-// //   top: 210px;
-// //   right: 0;
-// //   border-top: 16px solid transparent;
-// //   border-left: 16px solid #afafaf;
-// //   border-bottom: 16px solid transparent;
-
-// //   @include vp-1199 {
-// //     top: 188px;
-// //     right: 43px;
-// //   }
-
-// //   @include vp-767 {
-// //     top: 236px;
-// //     border-top: 9px solid transparent;
-// //     border-left: 10px solid #afafaf;
-// //     border-bottom: 9px solid transparent;
-// //   }
-// // }
-
-// // .reviews__control-right:hover,
-// // .reviews__control-right:focus {
-// //   cursor: pointer;
-// // }
-
-// // .reviews__control-right::before {
-// //   content: "";
-// //   position: absolute;
-// //   top: -16px;
-// //   right: 1px;
-// //   width: 0;
-// //   height: 0;
-// //   border-top: 16px solid transparent;
-// //   border-left: 16px solid #ffffff;
-// //   border-bottom: 16px solid transparent;
-
-// //   @include vp-767 {
-// //     top: -9px;
-// //     right: 1px;
-// //     border-top: 9px solid transparent;
-// //     border-left: 10px solid #ffffff;
-// //     border-bottom: 9px solid transparent;
-// //   }
-// // }
-
-// // .reviews__control-left:hover,
-// // .reviews__control-right:hover,
-// // .reviews__control-left:focus,
-// // .reviews__control-right:focus {
-// //   cursor: pointer;
-// // }
-
-// // @media (max-width: $desktop-width) {
-// //   .reviews {
-
-// //   }
-
-// //   .reviews h2 {
-
-// //   }
-
-// //   .reviews__wrap {
-
-// //   }
-
-// //   .reviews__item {
-
-// //   }
-
-// //   .reviews__control-left {
-
-// //   }
-
-// //   .reviews__control-right {
-// //     top: 192px;
-// //   }
-// // }
-
-// // @media (max-width: $tablet-width) {
-// //   .reviews {
-
-// //   }
-
-// //   .reviews h2 {
-
-// //   }
-
-// //   .reviews__wrap {
-
-// //   }
-
-// //   .reviews__item {
-
-// //   }
-
-// //   .reviews__item img {
-
-// //   }
-
-// //   .reviews__item h3 {
-
-// //   }
-
-// //   .reviews__item p {
-
-// //   }
-
-// //   .reviews__control-left {
-
-// //   }
-
-// //   .reviews__control-left::before {
-
-// //   }
-
-// //   .reviews__control-right {
-
-// //   }
-
-// //   .reviews__control-right::before {
-
-// //   }
-// // }
-
-// // .reviews__control-left:focus {
-// //   outline: none;
-// // }
-
-// // .reviews__control-right:focus {
-// //   outline: none;
-// // }
-
-
-
-
-
-
-
-
-
-
 .reviews {
   position: relative;
   width: 672px;
-  margin: auto;
-  margin-bottom: 100px;
+  margin: auto auto 100px;
+
+  @include vp-1199 {
+    width: 678px;
+    margin-bottom: 80px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    margin-bottom: 50px;
+  }
 }
 
 .reviews h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
-  font-size: 49px;
-  line-height: 49px;
-  font-weight: 700;
-  color: #102654;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin-top: 0;
   margin-bottom: 30px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 26px;
+  }
 }
 
 .reviews__wrap {
   width: 600px;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
+
+  @include vp-1199 {
+    width: 606px;
+  }
+
+  @include vp-767 {
+    width: 266px;
+  }
 }
 
 .reviews__list {
@@ -453,12 +58,21 @@
   margin-right: 40px;
   display: flex;
   flex-shrink: 0;
-  padding-top: 53px;
-  padding-bottom: 56px;
-  padding-left: 62px;
-  padding-right: 58px;
-  background: #1c3374;
+  padding: 53px 58px 56px 62px;
+  background: $dark-blue;
   box-sizing: border-box;
+
+  @include vp-1199 {
+    width: 566px;
+    padding: 53px 62px 56px 65px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    padding: 47px 25px 36px 25px;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 .reviews__item img {
@@ -469,27 +83,45 @@
   flex-shrink: 0;
   margin-top: 9px;
   margin-right: 29px;
-  background: #1c3374;
+  background: $dark-blue;
+
+  @include vp-767 {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: 31px;
+    left: 41px;
+  }
 }
 
 .reviews__item h3 {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 20px;
   line-height: 30px;
   font-weight: 700;
-  color: #ffffff;
+  color: $white;
   margin-top: 0;
   margin-bottom: 11px;
+
+  @include vp-767 {
+    padding-left: 99px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
 }
 
 .reviews__item p {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
-  color: #ffffff;
+  color: $white;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include vp-767 {
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 22px;
+  }
 }
 
 .reviews__control-left {
@@ -503,10 +135,23 @@
   border-top: 16px solid transparent;
   border-right: 16px solid #afafaf;
   border-bottom: 16px solid transparent;
+
+  @include vp-1199 {
+    top: 192px;
+  }
+
+  @include vp-767 {
+    top: 236px;
+    border-top: 9px solid transparent;
+    border-right: 10px solid #afafaf;
+    border-bottom: 9px solid transparent;
+  }
 }
 
 .reviews__control-left:hover,
-.reviews__control-left:focus {
+.reviews__control-left:focus,
+.reviews__control-right:hover,
+.reviews__control-right:focus {
   cursor: pointer;
 }
 
@@ -518,8 +163,16 @@
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
-  border-right: 16px solid #ffffff;
+  border-right: 16px solid $white;
   border-bottom: 16px solid transparent;
+
+  @include vp-767 {
+    top: -9px;
+    left: 1px;
+    border-top: 9px solid transparent;
+    border-right: 10px solid $white;
+    border-bottom: 9px solid transparent;
+  }
 }
 
 .reviews__control-right {
@@ -532,11 +185,17 @@
   border-top: 16px solid transparent;
   border-left: 16px solid #afafaf;
   border-bottom: 16px solid transparent;
-}
 
-.reviews__control-right:hover,
-.reviews__control-right:focus {
-  cursor: pointer;
+  @include vp-1199 {
+    top: 192px;
+  }
+
+  @include vp-767 {
+    top: 236px;
+    border-top: 9px solid transparent;
+    border-left: 10px solid #afafaf;
+    border-bottom: 9px solid transparent;
+  }
 }
 
 .reviews__control-right::before {
@@ -547,123 +206,14 @@
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
-  border-left: 16px solid #ffffff;
+  border-left: 16px solid $white;
   border-bottom: 16px solid transparent;
-}
 
-.reviews__control-left:hover,
-.reviews__control-right:hover,
-.reviews__control-left:focus,
-.reviews__control-right:focus {
-  cursor: pointer;
-}
-
-@media (max-width: $desktop-width) {
-  .reviews {
-    width: 678px;
-    margin-bottom: 80px;
-  }
-
-  .reviews h2 {
-    font-size: 42px;
-    line-height: 42px;
-    margin-bottom: 25px;
-  }
-
-  .reviews__wrap {
-    width: 606px;
-  }
-
-  .reviews__item {
-    width: 566px;
-    padding-top: 53px;
-    padding-bottom: 56px;
-    padding-left: 65px;
-    padding-right: 62px;
-  }
-
-  .reviews__control-left {
-    top: 192px;
-  }
-
-  .reviews__control-right {
-    top: 192px;
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .reviews {
-    width: 290px;
-    margin-bottom: 50px;
-  }
-
-  .reviews h2 {
-    font-size: 32px;
-    line-height: 32px;
-    margin-bottom: 26px;
-  }
-
-  .reviews__wrap {
-    width: 266px;
-  }
-
-  .reviews__item {
-    width: 226px;
-    padding-top: 47px;
-    padding-bottom: 36px;
-    padding-left: 25px;
-    padding-right: 25px;
-    position: relative;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .reviews__item img {
-    width: 68px;
-    height: 68px;
-    position: absolute;
-    top: 31px;
-    left: 41px;
-  }
-
-  .reviews__item h3 {
-    padding-left: 99px;
-    line-height: 26px;
-    margin-bottom: 24px;
-  }
-
-  .reviews__item p {
-    margin-bottom: 0;
-    text-align: center;
-    line-height: 22px;
-  }
-
-  .reviews__control-left {
-    top: 236px;
-    border-top: 9px solid transparent;
-    border-right: 10px solid #afafaf;
-    border-bottom: 9px solid transparent;
-  }
-
-  .reviews__control-left::before {
-    top: -9px;
-    left: 1px;
-    border-top: 9px solid transparent;
-    border-right: 10px solid #ffffff;
-    border-bottom: 9px solid transparent;
-  }
-
-  .reviews__control-right {
-    top: 236px;
-    border-top: 9px solid transparent;
-    border-left: 10px solid #afafaf;
-    border-bottom: 9px solid transparent;
-  }
-
-  .reviews__control-right::before {
+  @include vp-767 {
     top: -9px;
     right: 1px;
     border-top: 9px solid transparent;
-    border-left: 10px solid #ffffff;
+    border-left: 10px solid $white;
     border-bottom: 9px solid transparent;
   }
 }

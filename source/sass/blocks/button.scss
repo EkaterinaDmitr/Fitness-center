@@ -3,15 +3,14 @@
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
-  border: 4px solid #ffffff;
-  padding-top: 19px;
-  padding-bottom: 20px;
+  border: 4px solid $white;
+  padding: 19px 0 20px;
   text-align: center;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $robotoCondensed;
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;
-  color: #ffffff;
+  color: $white;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -25,16 +24,23 @@
 
 .button--introduction {
   width: 234px;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: -2px;
+  margin: 0 -2px 0;
+
+  @include vp-1199 {
+    width: 187px;
+  }
+
+  @include vp-767 {
+    width: calc(100% + 4px);
+    margin: 0 0 0 -1px;
+    padding-bottom: 22px;
+  }
 }
 
 .button--subscription {
   width: 208px;
-  padding-top: 25px;
-  padding-bottom: 27px;
-  color: #102654;
+  padding: 25px 0 27px;
+  color: $text-color;
   box-shadow: inset 0 0 0 2px rgba(16, 38, 84, 1);
   border: none;
 }
@@ -43,7 +49,7 @@
 .button--subscription:focus {
   opacity: 1;
   outline: none;
-  color: #ffffff;
+  color: $white;
   box-shadow: none;
   background: linear-gradient(-50deg, #003d85, #b80027 70%);
 }
@@ -51,51 +57,33 @@
 .button--games {
   background: transparent;
   width: 347px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding: 24px 0 25px;
   margin-left: -2px;
-}
 
-.button--submit {
-  font-size: 14px;
-  line-height: 16px;
-  padding-top: 15px;
-  padding-bottom: 17px;
-  border-width: 3px;
-  width: 412px;
-  margin-left: -1px;
-  background: transparent;
-}
-
-@media (max-width: $desktop-width) {
-  .button--introduction {
-    width: 187px;
-  }
-
-  .button--games {
+  @include vp-1199 {
     font-size: 10px;
     line-height: 12px;
     border-width: 2px;
     width: 204px;
     margin-left: -1px;
-    padding-top: 12px;
-    padding-bottom: 13px;
-  }
-
-  .button--submit {
-    width: 474px;
+    padding: 12px 0 13px;
   }
 }
 
-@media (max-width: $tablet-width) {
-  .button--introduction {
-    width: calc(100% + 4px);
-    margin-right: 0;
-    margin-left: -1px;
-    padding-bottom: 22px;
+.button--submit {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 15px 0 17px;
+  border-width: 3px;
+  width: 412px;
+  margin-left: -1px;
+  background: transparent;
+
+  @include vp-1199 {
+    width: 474px;
   }
 
-  .button--submit {
+  @include vp-767 {
     width: 292px;
     padding-bottom: 19px;
   }

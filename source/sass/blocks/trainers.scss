@@ -3,8 +3,6 @@
   margin: 0 auto;
   padding-top: 0;
   padding-bottom: 110px;
-  margin-top: 0;
-  margin-bottom: 0;
   position: relative;
   overflow: hidden;
 
@@ -62,14 +60,14 @@
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
-  border-right: 16px solid #ffffff;
+  border-right: 16px solid $white;
   border-bottom: 16px solid transparent;
 
   @include vp-767 {
     top: -9px;
     left: 1px;
     border-top: 9px solid transparent;
-    border-right: 10px solid #ffffff;
+    border-right: 10px solid $white;
     border-bottom: 9px solid transparent;
   }
 }
@@ -86,13 +84,14 @@
   border-bottom: 16px solid transparent;
 
   @include vp-1199 {
-    top: 21px;
+    top: 214px;
   }
-    @include vp-767 {
-      top: 207px;
-      border-top: 9px solid transparent;
-      border-left: 10px solid #afafaf;
-      border-bottom: 9px solid transparent;
+
+  @include vp-767 {
+    top: 207px;
+    border-top: 9px solid transparent;
+    border-left: 10px solid #afafaf;
+    border-bottom: 9px solid transparent;
   }
 }
 
@@ -113,14 +112,14 @@
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
-  border-left: 16px solid #ffffff;
+  border-left: 16px solid $white;
   border-bottom: 16px solid transparent;
 
   @include vp-767 {
     top: -9px;
     right: 1px;
     border-top: 9px solid transparent;
-    border-left: 10px solid #ffffff;
+    border-left: 10px solid $white;
     border-bottom: 9px solid transparent;
   }
 }
@@ -136,27 +135,17 @@
   text-align: start;
   padding-left: 58px;
   margin-bottom: 40px;
-//   padding-left: 58px;
-//   padding-right: 58px;
-//   font-family: "Bebas Neue", "Arial", sans-serif;
-//   font-size: 49px;
-//   line-height: 49px;
-//   font-weight: 700;
-//   color: #102654;
-//   text-transform: uppercase;
-//   letter-spacing: 0.03em;
-//   margin-top: 0;
-//   margin-bottom: 46px;
 
   @include vp-1199 {
     text-align: center;
     margin-bottom: 30px;
     padding: 0;
   }
-    @include vp-767 {
-      font-size: 32px;
-      line-height: 32px;
-      margin-bottom: 36px;
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 36px;
   }
 }
 
@@ -169,8 +158,9 @@
   @include vp-1199 {
     max-width: 586px;
   }
-    @include vp-767 {
-      max-width: 246px;
+
+  @include vp-767 {
+    max-width: 246px;
   }
 }
 
@@ -179,14 +169,7 @@
   list-style: none;
   display: flex;
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  @include vp-1199 {
-
-  }
+  padding: 10px;
 }
 
 .trainers__item {
@@ -240,9 +223,10 @@
     width: 268px;
     padding-top: 243px;
   }
-    @include vp-767 {
-      width: 226px;
-      padding-top: 220px;
+
+  @include vp-767 {
+    width: 226px;
+    padding-top: 220px;
   }
 }
 
@@ -252,7 +236,7 @@
   font-size: 18px;
   line-height: 27px;
   font-weight: 700;
-  color: #ffffff;
+  color: $white;
   margin-top: 0;
   margin-bottom: -3px;
 
@@ -261,8 +245,9 @@
     margin-top: 0;
     margin-bottom: -3px;
   }
-    @include vp-767 {
-      padding-left: 20px;
+
+  @include vp-767 {
+    padding-left: 20px;
   }
 }
 
@@ -281,9 +266,10 @@
     padding-left: 13px;
     margin-bottom: 31px;
   }
-    @include vp-767 {
-      padding-left: 20px;
-      margin-bottom: 32px;
+
+  @include vp-767 {
+    padding-left: 20px;
+    margin-bottom: 32px;
   }
 }
 
@@ -299,8 +285,9 @@
   @include vp-1199 {
     padding-right: 20px;
   }
-    @include vp-767 {
-      padding-left: 49px;
+
+  @include vp-767 {
+    padding-left: 49px;
   }
 }
 
@@ -308,13 +295,9 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #ffffff;
+  color: $white;
   margin-bottom: 13px;
   position: relative;
-
-  @include vp-1199 {
-
-  }
 }
 
 .trainers__summary-list li::before {
@@ -324,12 +307,8 @@
   left: -15px;
   width: 6px;
   height: 6px;
-  background: #ffffff;
+  background: $white;
   border-radius: 50%;
-
-  @include vp-1199 {
-
-  }
 }
 
 .trainers__item:hover {
@@ -342,7 +321,6 @@
 
   @include vp-767 {
     padding-top: 40px;
-
   }
 }
 
@@ -353,118 +331,3 @@
 .trainers__item:hover .trainers__summary-list {
   display: block;
 }
-
-// @media (max-width: $desktop-width) {
-//   .trainers {
-
-//   }
-
-//   .trainers__control-left {
-
-//   }
-
-//   .trainers__control-right {
-
-//   }
-
-//   .trainers h2 {
-
-//   }
-
-//   .trainers__wrap {
-
-//   }
-
-//   .trainers__item {
-
-//   }
-
-//   .trainers__item img {
-
-//   }
-
-//   .trainers__inner {
-
-//   }
-
-//   .trainers__inner p {
-
-//   }
-
-//   .trainers__inner span {
-
-//   }
-
-//   .trainers__summary-list {
-
-//   }
-
-//   .trainers__item:hover .trainers__inner {
-//     padding-top: 51px;
-//   }
-// }
-
-// @media (max-width: $tablet-width) {
-//   .trainers {
-
-//   }
-
-//   .trainers__control-left {
-
-//   }
-
-//   .trainers__control-left::before {
-
-//   }
-
-//   .trainers__control-right {
-
-//   }
-
-//   .trainers__control-right::before {
-
-//   }
-
-//   .trainers__control-left:focus {
-
-//   }
-
-//   .trainers__control-right:focus {
-//     outline: none;
-//   }
-
-//   .trainers h2 {
-
-//   }
-
-//   .trainers__wrap {
-
-//   }
-
-//   .trainers__item {
-
-//   }
-
-//   .trainers__item img {
-
-//   }
-
-//   .trainers__inner {
-
-//   }
-
-//   .trainers__inner p {
-
-//   }
-
-//   .trainers__inner span {
-
-//   }
-
-//   .trainers__summary-list {
-
-//   }
-
-//   .trainers__item:hover .trainers__inner {
-//   }
-// }

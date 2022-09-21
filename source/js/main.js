@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable camelcase */
 /* eslint-disable no-invalid-this */
 /* eslint-disable no-unused-expressions */
@@ -37,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
 
 // для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
+// const breakpoint = window.matchMedia('(min-width:1024px)');
 // const breakpointChecker = () => {
 //   if (breakpoint.matches) {
 //   } else {
@@ -203,7 +204,7 @@ window.addEventListener('resize', function () {
         if (pos < 3) {
           event.preventDefault();
         }
-        // eslint-disable-next-line one-var
+        // eslint-disable-next-line one-const
         let matrix = '+7 (___) ___ ____',
           i = 0,
           def = matrix.replace(/\D/g, ''),
@@ -240,5 +241,34 @@ window.addEventListener('resize', function () {
       input.addEventListener('focus', mask, false);
     }
 );
-
 screenWidthDetection();
+
+
+(() => {
+  const tabs = document.querySelector('.tabs');
+
+  if (tabs) {
+    const toggleTabs = (event) => {
+      if (String(event.target.className) === 'tabs__link') {
+        const dataTab = event.target.getAttribute('data-tab');
+        const tabH = document.getElementsByClassName('tabs__link');
+        for (let i = 0; i < tabH.length; i++) {
+          tabH[i].classList.remove('tabs__link--current');
+          tabH[i].removeAttribute('tabindex');
+        }
+        event.target.classList.add('tabs__link--current');
+        event.target.setAttribute('tabindex', '-1');
+        const tabBody = document.getElementsByClassName('tabs-body');
+        for (let j = 0; j < tabBody.length; j++) {
+          if (Number(dataTab) === j) {
+            tabBody[j].classList.add('tabs-body--current');
+          } else {
+            tabBody[j].classList.remove('tabs-body--current');
+          }
+        }
+      }
+    };
+    tabs.addEventListener('click', toggleTabs);
+  }
+
+})();

@@ -79,13 +79,11 @@
               <picture>
                 <!-- 1x: 320x313px; 2x: 640x626px; -->
                 <source media="(max-width: 767px)" srcset="img/gym-hall-mob.webp 1x, img/gym-hall-mob@2x.webp 2x" type="image/webp">
-                <source media="(max-width: 767px)" srcset="img/gym-hall-mob.jpg 1x, img/gym-hall-mob@2x.jpg 2x">
                 <!-- 1x: 678x345px; 2x: 1356x690px; -->
                 <source media="(max-width: 1199px)" srcset="img/gym-hall-tab.webp 1x, img/gym-hall-tab@2x.webp 2x" type="image/webp">
-                <source media="(max-width: 1199px)" srcset="img/gym-hall-tab.jpg 1x, img/gym-hall-tab@2x.jpg 2x">
                 <!-- 1x: 600x401px; 2x: 1320x802px -->
-                <source media="(min-width: 1200px)" srcset="img/gym-hall-desk.webp 1x, img/gym-hall-desk.webp 2x" type="image/webp">
-                <img src="img/gym-hall-desk.jpg" srcset="img/gym-hall-desk@2x.jpg 2x" width="660" height="401" alt="Фото тренажерного зала">
+                <source srcset="img/gym-hall-desk.webp 1x, img/gym-hall-desk.webp 2x" type="image/webp">
+                <img class="about__img" src="img/gym-hall-desk.jpeg" srcset="img/gym-hall-desk@2x.jpeg 2x" width="660" height="401" alt="Фото тренажерного зала">
               </picture>
             </div>
             <div class="about__video-wrapper">
@@ -104,19 +102,21 @@
             </div>
           </div>
         </section>
-
         <section class="subscription" id="subscription">
+          <div class="container">
           <h2 class="heading">Абонементы</h2>
-          <form class="tabs">
-            <span class="tabs__border"></span>
-            <input class="tab-btn-1" type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
-            <label class="subscription__time-item" for="tab-btn-1">1 месяц</label>
-            <input class="tab-btn-2" type="radio" name="tab-btn" id="tab-btn-2" value="">
-            <label class="subscription__time-item" for="tab-btn-2">6 месяцев</label>
-            <input class="tab-btn-3" type="radio" name="tab-btn" id="tab-btn-3" value="">
-            <label class="subscription__time-item" for="tab-btn-3">12 месяцев</label>
-
-            <div class="content-1" id="content-1">
+            <ul class="tabs">
+              <li class="tabs__item">
+                <button type="button" class="tabs__link tabs__link--current" data-tab="0" tabindex="-1" aria-label="1 месяц">1 месяц</button>
+              </li>
+              <li class="tabs__item">
+                <button type="button" class="tabs__link" data-tab="1" aria-label="6 месяцев">6 месяцев</button>
+              </li>
+              <li class="tabs__item">
+                <button type="button" class="tabs__link" data-tab="2" aria-label="12 месяцев">12 месяцев</button>
+              </li>
+            </ul>
+            <div class="tabs-body tabs-body--current">
               <ul class="subscription__rates-list">
                 <li class="subscription__rate-item">
                   <div class="subscription__inner">
@@ -150,7 +150,7 @@
                 </li>
               </ul>
             </div>
-            <div class="content-2" id="content-2">
+            <div class="tabs-body">
               <ul class="subscription__rates-list">
                 <li class="subscription__rate-item">
                   <div class="subscription__inner">
@@ -184,7 +184,7 @@
                 </li>
               </ul>
             </div>
-            <div class="content-3" id="content-3">
+            <div class="tabs-body">
               <ul class="subscription__rates-list">
                 <li class="subscription__rate-item">
                   <div class="subscription__inner">
@@ -218,7 +218,7 @@
                 </li>
               </ul>
             </div>
-          </form>
+          </div>
         </section>
 
         <section class="games">
@@ -251,8 +251,11 @@
           <div class="trainers__wrap">
             <ul class="trainers__list">
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/anna-pavlova@1x.jpeg" srcset="img/anna-pavlova@1x.jpeg 1x, img/anna-pavlova@2x.jpeg 2x" width="260" height="294" alt="Анна Павлова">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/anna-pavlova@1x.webp 1x, img/anna-pavlova@2x.webp 2x" type="image/webp">
+                  <img src="img/anna-pavlova@1x.jpeg" srcset="img/anna-pavlova@1x.jpeg 1x, img/anna-pavlova@2x.jpeg 2x" width="260" height="294" alt="Анна Павлова">
+                </picture>
                 <div class="trainers__inner">
                   <p>Анна Павлова</p>
                   <span>CrossFit</span>
@@ -264,8 +267,11 @@
                 </div>
               </li>
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/alexey-lavrov@1x.jpeg" srcset="img/alexey-lavrov@1x.jpeg 1x, img/alexey-lavrov@2x.jpeg 2x" width="260" height="294" alt="Алексей Лавров">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/alexey-lavrov@1x.webp 1x, img/alexey-lavrov@2x.webp 2x" type="image/webp">
+                  <img src="img/alexey-lavrov@1x.jpeg" srcset="img/alexey-lavrov@1x.jpeg 1x, img/alexey-lavrov@2x.jpeg 2x" width="260" height="294" alt="Алексей Лавров">
+                </picture>
                 <div class="trainers__inner">
                   <p>Алексей Лавров</p>
                   <span>CrossFit</span>
@@ -277,8 +283,11 @@
                 </div>
               </li>
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/alexandr-pashkov@1x.jpeg" srcset="img/alexandr-pashkov@1x.jpeg 1x, img/alexandr-pashkov@2x.jpeg 2x" width="260" height="294" alt="Александр Пашков">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/alexandr-pashkov@1x.webp 1x, img/alexandr-pashkov@2x.webp 2x" type="image/webp">
+                  <img src="img/alexandr-pashkov@1x.jpeg" srcset="img/alexandr-pashkov@1x.jpeg 1x, img/alexandr-pashkov@2x.jpeg 2x" width="260" height="294" alt="Александр Пашков">
+                </picture>
                 <div class="trainers__inner">
                   <p>Александр Пашков</p>
                   <span>CrossFit</span>
@@ -290,8 +299,11 @@
                 </div>
               </li>
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/maria-ketova@1x.jpeg" srcset="img/maria-ketova@1x.jpeg 1x, img/maria-ketova@2x.jpeg 2x" width="260" height="294" alt="Мария Кетова">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/maria-ketova@1x.webp 1x, img/maria-ketova@2x.webp 2x" type="image/webp">
+                  <img src="img/maria-ketova@1x.jpeg" srcset="img/maria-ketova@1x.jpeg 1x, img/maria-ketova@2x.jpeg 2x" width="260" height="294" alt="Мария Кетова">
+                </picture>
                 <div class="trainers__inner">
                   <p>Мария Кетова</p>
                   <span>CrossFit</span>
@@ -303,8 +315,11 @@
                 </div>
               </li>
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/anna-pavlova@1x.jpeg" srcset="img/anna-pavlova@1x.jpeg 1x, img/anna-pavlova@2x.jpeg 2x" width="260" height="294" alt="Анна Павлова">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/anna-pavlova@1x.webp 1x, img/anna-pavlova@2x.webp 2x" type="image/webp">
+                  <img src="img/anna-pavlova@1x.jpeg" srcset="img/anna-pavlova@1x.jpeg 1x, img/anna-pavlova@2x.jpeg 2x" width="260" height="294" alt="Анна Павлова">
+                </picture>
                 <div class="trainers__inner">
                   <p>Анна Павлова</p>
                   <span>CrossFit</span>
@@ -316,8 +331,11 @@
                 </div>
               </li>
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/alexey-lavrov@1x.jpeg" srcset="img/alexey-lavrov@1x.jpeg 1x, img/alexey-lavrov@2x.jpeg 2x" width="260" height="294" alt="Алексей Лавров">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/alexey-lavrov@1x.webp 1x, img/alexey-lavrov@2x.webp 2x" type="image/webp">
+                  <img src="img/alexey-lavrov@1x.jpeg" srcset="img/alexey-lavrov@1x.jpeg 1x, img/alexey-lavrov@2x.jpeg 2x" width="260" height="294" alt="Алексей Лавров">
+                </picture>
                 <div class="trainers__inner">
                   <p>Алексей Лавров</p>
                   <span>CrossFit</span>
@@ -329,8 +347,11 @@
                 </div>
               </li>
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/alexandr-pashkov@1x.jpeg" srcset="img/alexandr-pashkov@1x.jpeg 1x, img/alexandr-pashkov@2x.jpeg 2x" width="260" height="294" alt="Александр Пашков">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/alexandr-pashkov@1x.webp 1x, img/alexandr-pashkov@2x.webp 2x" type="image/webp">
+                  <img src="img/alexandr-pashkov@1x.jpeg" srcset="img/alexandr-pashkov@1x.jpeg 1x, img/alexandr-pashkov@2x.jpeg 2x" width="260" height="294" alt="Александр Пашков">
+                </picture>
                 <div class="trainers__inner">
                   <p>Александр Пашков</p>
                   <span>CrossFit</span>
@@ -342,8 +363,11 @@
                 </div>
               </li>
               <li class="trainers__item">
-                <!-- 1x: 260px 294px ; 2x: 520px 588px -->
-                <img src="img/maria-ketova@1x.jpeg" srcset="img/maria-ketova@1x.jpeg 1x, img/maria-ketova@2x.jpeg 2x" width="260" height="294" alt="Мария Кетова">
+                <picture>
+                  <!-- 1x: 260px 294px ; 2x: 520px 588px -->
+                  <source srcset="img/maria-ketova@1x.webp 1x, img/maria-ketova@2x.webp 2x" type="image/webp">
+                  <img src="img/maria-ketova@1x.jpeg" srcset="img/maria-ketova@1x.jpeg 1x, img/maria-ketova@2x.jpeg 2x" width="260" height="294" alt="Мария Кетова">
+                </picture>
                 <div class="trainers__inner">
                   <p>Мария Кетова</p>
                   <span>CrossFit</span>

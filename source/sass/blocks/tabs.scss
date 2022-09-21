@@ -1,52 +1,77 @@
 .tabs {
-  text-align: center;
-  padding-top: 34px;
-
-  @include vp-767 {
-    padding-top: 23px;
-  }
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  border-bottom: 2px solid rgba(120,120,120,.2);
+  width: fit-content;
 }
 
-.tabs > input[type="radio"] {
-  display: none;
-}
-
-.tabs > div {
-  display: none;
-  padding: 35px 0 37px;
+.tabs__item:not(:last-child) {
+  margin: 0 45px 14px 0;
 
   @include vp-1199 {
-    padding: 51px 0 53px;
+    margin-right: 55px;
   }
 
   @include vp-767 {
-    padding: 34px 0 53px;
+    margin: 0 44px 11px 0;
   }
 }
 
-.tab-btn-1:checked ~ .content-1,
-.tab-btn-2:checked ~ .content-2,
-.tab-btn-3:checked ~ .content-3 {
+.tabs__link {
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  color: $text-color;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}
+
+.tabs__link:active,
+.tabs .tabs__link--current {
+  color: $text-color;
+  border: none;
+  outline: none;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $active-red;
+  }
+}
+
+.tabs .tabs__link--current {
+  pointer-events: none;
+}
+
+.tabs-body {
+  display: none;
+}
+
+.tabs-body--current {
   display: block;
-}
-
-.tabs > label:not(:first-of-type) {
-  border-left: none;
-}
-
-.tabs__border {
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
-  position: absolute;
-  width: 341px;
-  top: 243px;
-
-  @include vp-1199 {
-    width: 332px;
-    top: 204px;
-  }
-
-  @include vp-767 {
-    width: 290px;
-    top: 160px;
-  }
 }

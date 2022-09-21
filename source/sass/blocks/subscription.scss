@@ -3,22 +3,28 @@
   margin-bottom: 120px;
   position: relative;
   padding-top: 119px;
-  padding-bottom: 26px;
+  padding-bottom: 64px;
 
   @include vp-1199 {
-    padding-top: 95px;
-    margin-bottom: 54px;
+    padding: 95px 0 50px;
+    margin-bottom: 97px;
   }
 
   @include vp-767 {
-    padding-top: 74px;
-    margin-bottom: 7px;
+    padding: 74px 0 17px;
+    margin-bottom: 70px;
   }
 }
 
 .subscription h2 {
+  margin-bottom: 38px;
+
   @include vp-1199 {
-    margin-bottom: -4px;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
   }
 }
 
@@ -33,16 +39,16 @@
   background-repeat: no-repeat;
   z-index: 1;
   background-size: cover;
-  background-image: image-set("../../img/disks-desktop@1x.png" 1x, "../../img/disks-desktop@2x.png" 2x);
+  background-image: image-set("../img/disks-desktop@1x.png" 1x, "../img/disks-desktop@2x.png" 2x);
 
 
   @include vp-1199 {
     right: 0;
-    top: 80%;
+    top: 82%;
     width: 347px;
     height: 444px;
     background-size: cover;
-    background-image: image-set("../../img/disks-tablet@1x.png" 1x, "../../img/disks-tablet@2x.png" 2x);
+    background-image: image-set("../img/disks-tablet@1x.png" 1x, "../img/disks-tablet@2x.png" 2x);
   }
 
   @include vp-767 {
@@ -122,10 +128,11 @@
 
 .subscription__rates-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   list-style: none;
   padding: 0;
   justify-content: center;
+  margin-top: 37px;
 
   @include vp-1199 {
     flex-direction: column;
@@ -136,7 +143,6 @@
 .subscription__rate-item {
   width: 360px;
   box-sizing: border-box;
-  margin-right: 40px;
   margin-bottom: 40px;
   background: $white;
   padding: 7px;
@@ -146,7 +152,7 @@
   @include vp-1199 {
     width: 442px;
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
   }
 
   @include vp-767 {
@@ -155,8 +161,12 @@
   }
 }
 
-.subscription__rate-item:nth-of-type(3n) {
-  margin-right: 0;
+.subscription__rate-item:not(:last-child) {
+  margin-right: 40px;
+
+  @include vp-1199 {
+    margin-right: 0;
+  }
 }
 
 .subscription__rate-item:hover,
@@ -170,14 +180,11 @@
   background: $white;
 
   @include vp-1199 {
-    padding: 45px 70px 60px 69px;
+    padding: 60px 70px 60px 69px;
   }
 
   @include vp-767 {
-    padding-top: 42px;
-    padding-bottom: 47px;
-    padding-left: 34px;
-    padding-right: 35px;
+    padding: 41px 33px 47px 34px;
   }
 }
 
@@ -246,7 +253,7 @@
   @include vp-767 {
     background-size: contain;
     top: 20px;
-    right: 35px;
+    right: 38px;
     width: 24px;
     height: 33px;
   }

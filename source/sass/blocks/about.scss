@@ -35,9 +35,17 @@
   }
 }
 
+.about__img {
+  @media (min-width: 1200px) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+}
+
 .about__content-wrapper img {
   margin-left: auto;
   object-fit: cover;
+
 
   @include vp-1199 {
     margin: 0;

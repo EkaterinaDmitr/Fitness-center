@@ -864,7 +864,11 @@ button,
   margin-bottom: 120px;
   position: relative;
   padding-top: 119px;
-  padding-bottom: 26px;
+  padding-bottom: 64px;
+}
+
+.subscription h2 {
+  margin-bottom: 38px;
 }
 
 .subscription::before {
@@ -878,8 +882,8 @@ button,
   background-repeat: no-repeat;
   z-index: 1;
   background-size: cover;
-  background-image: -webkit-image-set(url("../../img/disks-desktop@1x.png") 1x, url("../../img/disks-desktop@2x.png") 2x);
-  background-image: image-set("../../img/disks-desktop@1x.png" 1x, "../../img/disks-desktop@2x.png" 2x);
+  background-image: -webkit-image-set(url("../img/disks-desktop@1x.png") 1x, url("../img/disks-desktop@2x.png") 2x);
+  background-image: image-set("../img/disks-desktop@1x.png" 1x, "../img/disks-desktop@2x.png" 2x);
 }
 
 .subscription__center {
@@ -944,20 +948,22 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   list-style: none;
   padding: 0;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-top: 37px;
 }
 
 .subscription__rate-item {
   width: 360px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin-right: 40px;
   margin-bottom: 40px;
   background: #ffffff;
   padding: 7px;
@@ -965,8 +971,8 @@ button,
   z-index: 1;
 }
 
-.subscription__rate-item:nth-of-type(3n) {
-  margin-right: 0;
+.subscription__rate-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .subscription__rate-item:hover,
@@ -1547,34 +1553,71 @@ button,
 }
 
 .tabs {
-  text-align: center;
-  padding-top: 34px;
-}
-
-.tabs > input[type="radio"] {
-  display: none;
-}
-
-.tabs > div {
-  display: none;
-  padding: 35px 0 37px;
-}
-
-.tab-btn-1:checked ~ .content-1,
-.tab-btn-2:checked ~ .content-2,
-.tab-btn-3:checked ~ .content-3 {
-  display: block;
-}
-
-.tabs > label:not(:first-of-type) {
-  border-left: none;
-}
-
-.tabs__border {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.tabs__item:not(:last-child) {
+  margin: 0 45px 14px 0;
+}
+
+.tabs__link {
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  color: #102654;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.tabs__link:hover,
+.tabs__link:focus {
+  opacity: 0.7;
+}
+
+.tabs__link:active,
+.tabs .tabs__link--current {
+  color: #102654;
+  border: none;
+  outline: none;
+}
+
+.tabs__link:active::before,
+.tabs .tabs__link--current::before {
+  content: "";
+  display: block;
   position: absolute;
-  width: 341px;
-  top: 243px;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d10a42;
+}
+
+.tabs .tabs__link--current {
+  pointer-events: none;
+}
+
+.tabs-body {
+  display: none;
+}
+
+.tabs-body--current {
+  display: block;
 }
 
 .video {
@@ -2320,6 +2363,15 @@ button,
   }
 } */
 
+@media (min-width: 1200px) {
+  .about__img {
+    -ms-grid-column: 2;
+    grid-column-start: 2;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+  }
+}
+
 @media (max-width: 1279px) {
   .about__video-wrapper {
     margin-left: 180px;
@@ -2439,22 +2491,22 @@ button,
   }
 
   .subscription {
-    padding-top: 95px;
-    margin-bottom: 54px;
+    padding: 95px 0 50px;
+    margin-bottom: 97px;
   }
 
   .subscription h2 {
-    margin-bottom: -4px;
+    margin-bottom: 30px;
   }
 
   .subscription::before {
     right: 0;
-    top: 80%;
+    top: 82%;
     width: 347px;
     height: 444px;
     background-size: cover;
-    background-image: -webkit-image-set(url("../../img/disks-tablet@1x.png") 1x, url("../../img/disks-tablet@2x.png") 2x);
-    background-image: image-set("../../img/disks-tablet@1x.png" 1x, "../../img/disks-tablet@2x.png" 2x);
+    background-image: -webkit-image-set(url("../img/disks-tablet@1x.png") 1x, url("../img/disks-tablet@2x.png") 2x);
+    background-image: image-set("../img/disks-tablet@1x.png" 1x, "../img/disks-tablet@2x.png" 2x);
   }
 
   .subscription__time-item {
@@ -2477,11 +2529,15 @@ button,
   .subscription__rate-item {
     width: 442px;
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
+  }
+
+  .subscription__rate-item:not(:last-child) {
+    margin-right: 0;
   }
 
   .subscription__inner {
-    padding: 45px 70px 60px 69px;
+    padding: 60px 70px 60px 69px;
   }
 
   .subscription__inner div::before {
@@ -2735,13 +2791,12 @@ button,
     margin-right: -5px;
   }
 
-  .tabs > div {
-    padding: 51px 0 53px;
+  .tabs__item:not(:last-child) {
+    margin-right: 55px;
   }
 
-  .tabs__border {
-    width: 332px;
-    top: 204px;
+  .tabs__link {
+    font-size: 18px;
   }
 
   .video {
@@ -3063,8 +3118,12 @@ button,
   }
 
   .subscription {
-    padding-top: 74px;
-    margin-bottom: 7px;
+    padding: 74px 0 17px;
+    margin-bottom: 70px;
+  }
+
+  .subscription h2 {
+    margin-bottom: 20px;
   }
 
   .subscription::before {
@@ -3084,10 +3143,7 @@ button,
   }
 
   .subscription__inner {
-    padding-top: 42px;
-    padding-bottom: 47px;
-    padding-left: 34px;
-    padding-right: 35px;
+    padding: 41px 33px 47px 34px;
   }
 
   .subscription__inner h3 {
@@ -3110,7 +3166,7 @@ button,
   .subscription__inner div::before {
     background-size: contain;
     top: 20px;
-    right: 35px;
+    right: 38px;
     width: 24px;
     height: 33px;
   }
@@ -3124,7 +3180,7 @@ button,
 
   .games {
     max-width: 290px;
-    margin-bottom: 66px;
+    margin-bottom: 68px;
     display: block;
   }
 
@@ -3331,17 +3387,12 @@ button,
     margin-right: 0;
   }
 
-  .tabs {
-    padding-top: 23px;
+  .tabs__item:not(:last-child) {
+    margin: 0 44px 11px 0;
   }
 
-  .tabs > div {
-    padding: 34px 0 53px;
-  }
-
-  .tabs__border {
-    width: 290px;
-    top: 160px;
+  .tabs__link {
+    font-size: 16px;
   }
 
   .video {

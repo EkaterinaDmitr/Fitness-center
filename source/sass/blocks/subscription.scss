@@ -129,6 +129,7 @@
 .subscription__rates-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   justify-content: center;
@@ -156,7 +157,7 @@
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 100%;
     margin-bottom: 37px;
   }
 }
@@ -185,6 +186,9 @@
 
   @include vp-767 {
     padding: 41px 33px 47px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -253,7 +257,7 @@
   @include vp-767 {
     background-size: contain;
     top: 20px;
-    right: 38px;
+    right: 0;
     width: 24px;
     height: 33px;
   }
@@ -275,7 +279,7 @@
   @include vp-767 {
     font-size: 80px;
     line-height: 120px;
-    left: 22px;
+    left: -12%;
     top: -45px;
   }
 }

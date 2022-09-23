@@ -19,7 +19,7 @@
 .header__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .header__logo img {
@@ -44,6 +44,8 @@
   line-height: 26px;
   letter-spacing: 0.03em;
   color: $white;
+  display: flex;
+  flex-direction: column;
 
   &:hover,
   &:focus {

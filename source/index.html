@@ -86,19 +86,20 @@
                 <img class="about__img" src="img/gym-hall-desk.jpeg" srcset="img/gym-hall-desk@2x.jpeg 2x" width="660" height="401" alt="Фото тренажерного зала">
               </picture>
             </div>
-            <div class="about__video-wrapper">
-              <div class="video">
-                <a class="video__link" tabindex="0" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
-                  <picture>
-                    <!-- 1x: 320x167px; 2x: 640x334px -->
-                    <source media="(max-width: 767px)" srcset="img/preview-video-mob.webp 1x, img/preview-video-mob.webp 2x" type="image/webp">
-                    <source media="(max-width: 767px)" srcset="img/preview-video-mob.png 1x, img/preview-video-mob.png 2x">
-                    <!-- 1x: 364x228px; 2x: 728x456px -->
-                    <source srcset="img/preview-video-desk.webp 1x, img/preview-video-desk.webp 2x" type="image/webp">
-                    <img class="video__media" src="img/preview-video-desk.png" srcset="img/preview-video-desk@2x.png 2x" width="364" height="228" alt="Превью видео с изображением тренажерного зала">
-                  </picture>
-                </a>
+
+            <div class="about__video-wrapper preview">
+              <iframe class="preview__video preview__video--no-js" width="560" height="315" src="https://www.youtube.com/embed/9TZXsZItgdw?controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="preview__image-container preview__image-container--no-js">
+                <picture>
+                  <!-- 1x: 320x167px; 2x: 640x334px -->
+                  <source media="(max-width: 767px)" srcset="img/preview-video-mob.webp 1x, img/preview-video-mob.webp 2x" type="image/webp">
+                  <source srcset="img/preview-video-desk.webp 1x, img/preview-video-desk.webp 2x" type="image/webp">
+                  <img src="img/preview-video-desk.png" srcset="img/preview-video-desk@2x.png 2x" width="364" height="228" alt="Превью видео с изображением тренажерного зала">
+                </picture>
               </div>
+              <button class="preview__play preview__play--no-js">
+                <span class="visually-hidden">Запустить видео</span>
+              </button>
             </div>
           </div>
         </section>
@@ -448,6 +449,8 @@
                   <a class="discount__more  discount__more--year" href="#">подробнее</a>
                 </div>
                 <picture>
+                  <source media="(max-width: 767px)" srcset="img/discount-mob.webp 1x, img/discount-mob@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 767px)" srcset="img/discount-mob.jpg, img/discount-mob@2x.jpg 2x">
                   <!-- 1x: 399x462px; 2x: 798x924px; -->
                   <source media="(max-width: 1199px)" srcset="img/discount-tablet.webp 1x, img/discount-tablet@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 1199px)" srcset="img/discount-tablet.jpg, img/discount-tablet@2x.jpg 2x">
@@ -527,12 +530,16 @@
                 <h3>График работы:</h3>
                 <p>Пн-Вс: с 8:00 до 22:00</p>
               </div>
-              <div class="contact__online">
-                <h3>Телефон:</h3>
-                <a href="tel:+78005555555">8-800-555-55-55</a>
-                <h3>Email:</h3>
-                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-              </div>
+              <div>
+                <div class="contact__online">
+                  <h3>Телефон:</h3>
+                  <a href="tel:+78005555555">8-800-555-55-55</a>
+                </div>
+                <div class="contact__online">
+                  <h3>Email:</h3>
+                  <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                </div>
+            </div>
             </div>
           </div>
         </section>
@@ -551,8 +558,6 @@
               <li class="main-footer__nav-item">
                 <a class="main-footer__nav-link" href="#subscription" aria-label="Абонементы">Абонементы</a>
               </li>
-            </ul>
-            <ul class="main-footer__nav-list main-footer__nav-list--second">
               <li class="main-footer__nav-item">
                 <a class="main-footer__nav-link" href="#discount" aria-label="Акции">Акции</a>
               </li>

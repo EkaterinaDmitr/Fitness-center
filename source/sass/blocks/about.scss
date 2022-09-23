@@ -128,9 +128,12 @@
   margin-left: 80px;
   width: 364px;
   height: 228px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 
   @include vp-1279 {
-    margin-left: 180px;
+    margin-left: 210px;
   }
 
   @include vp-1199 {
@@ -138,11 +141,12 @@
     margin-top: -84px;
     margin-left: 0;
     width: 266px;
-    height: 167px;
+    min-height: 167px;
   }
 
   @include vp-767 {
     margin-top: 0;
-    width: 320px;
+    width: 100%;
+    height: 100%;
   }
 }

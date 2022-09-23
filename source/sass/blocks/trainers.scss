@@ -6,6 +6,11 @@
   position: relative;
   overflow: hidden;
 
+
+  @include vp-1279 {
+    max-width: 1150px;
+  }
+
   @include vp-1199 {
     max-width: 678px;
     padding-bottom: 80px;
@@ -23,7 +28,7 @@
   border-color: transparent;
   position: absolute;
   border-left: 0;
-  top: 236px;
+  top: 230px;
   left: 0;
   width: 0;
   height: 0;
@@ -31,7 +36,12 @@
   border-right: 16px solid #afafaf;
   border-bottom: 16px solid transparent;
 
+  @media (min-width: 1250px) {
+    left: 15px;
+  }
+
   @include vp-1199 {
+    left: 0;
     top: 214px;
   }
 
@@ -75,7 +85,7 @@
 .trainers__control-right {
   border-color: transparent;
   position: absolute;
-  top: 236px;
+  top: 230px;
   right: 0;
   width: 0;
   height: 0;
@@ -83,7 +93,12 @@
   border-left: 16px solid #afafaf;
   border-bottom: 16px solid transparent;
 
+  @media (min-width: 1250px) {
+    right: 15px;
+  }
+
   @include vp-1199 {
+    right: 0;
     top: 214px;
   }
 
@@ -150,10 +165,14 @@
 }
 
 .trainers__wrap {
-  max-width: 1180px;
+  max-width: 1160px;
   box-sizing: border-box;
   margin: 0 auto;
   overflow: hidden;
+
+  @include vp-1279 {
+    max-width: 1060px;
+  }
 
   @include vp-1199 {
     max-width: 586px;
@@ -169,7 +188,7 @@
   list-style: none;
   display: flex;
   position: relative;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .trainers__item {
@@ -179,6 +198,10 @@
   flex-shrink: 0;
   flex-grow: 0;
   z-index: 2;
+
+  @include vp-1279 {
+    margin-right: 10px;
+  }
 
   @include vp-1199 {
     width: 268px;

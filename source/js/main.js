@@ -51,149 +51,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 'use strict';
 
-
-const trainers = document.querySelector('.trainers');
-const trainersList = document.querySelector('.trainers__list');
-const trainerItemsAll = document.querySelectorAll('.trainers__item');
-const trainerPrev = document.querySelector('.trainers__control-left');
-const trainerNext = document.querySelector('.trainers__control-right');
-let trainerWidth;
-let trainerCount;
-let trainerPosition;
-const reviews = document.querySelector('.reviews');
-const reviewsList = document.querySelector('.reviews__list');
-const reviewsItemsAll = document.querySelectorAll('.reviews__item');
-const reviewsPrev = document.querySelector('.reviews__control-left');
-const reviewsNext = document.querySelector('.reviews__control-right');
-let reviewWidth;
-let reviewPosition;
-const reviewCount = 1;
-
-const screenWidthDetection = function () {
-  if (trainers) {
-    trainersList.style.marginLeft = 0 + 'px';
-  }
-  if (reviews) {
-    reviewsList.style.marginLeft = 0 + 'px';
-  }
-  if (window.matchMedia('(min-width: 320px)').matches) {
-    trainerWidth = 256;
-    trainerCount = 1;
-    trainerPosition = 0;
-    reviewWidth = 266;
-    reviewPosition = 0;
-  }
-
-  if (window.matchMedia('(min-width: 768px)').matches) {
-    trainerWidth = 298;
-    trainerCount = 2;
-    trainerPosition = 0;
-    reviewWidth = 606;
-    reviewPosition = 0;
-  }
-
-  if (window.matchMedia('(min-width: 1200px)').matches) {
-    trainerWidth = 300;
-    trainerCount = 4;
-    trainerPosition = 0;
-    reviewWidth = 600;
-    reviewPosition = 0;
-  }
-};
-
-if (trainers) {
-  const prevTrainerItem = function () {
-    trainerPosition = Math.min(trainerPosition, 0);
-    if (trainerPosition === 0) {
-      trainerPosition = -trainerWidth * (trainerItemsAll.length - trainerCount);
-    } else {
-      trainerPosition += trainerWidth;
-    }
-    if (trainersList) {
-      trainersList.style.marginLeft = trainerPosition + 'px';
-      trainersList.style.transition = 'margin-left 0.5s';
-    }
-  };
-
-  const nextTrainerItem = function () {
-    trainerPosition = Math.max(trainerPosition, -trainerWidth * (trainerItemsAll.length - trainerCount));
-    if (trainerPosition === -trainerWidth * (trainerItemsAll.length - trainerCount)) {
-      trainerPosition = 0;
-    } else {
-      trainerPosition -= trainerWidth;
-    }
-    if (trainersList) {
-      trainersList.style.marginLeft = trainerPosition + 'px';
-      trainersList.style.transition = 'margin-left 0.5s';
-    }
-  };
-
-  trainerPrev.addEventListener('click', prevTrainerItem);
-  trainerNext.addEventListener('click', nextTrainerItem);
-
-  trainerPrev.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 13) {
-      prevTrainerItem();
-    }
-  });
-
-  trainerNext.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 13) {
-      nextTrainerItem();
-    }
-  });
-}
-
-if (reviews) {
-  const prevReviewItem = function () {
-    reviewPosition = Math.min(reviewPosition, 0);
-    if (reviewPosition === 0) {
-      reviewPosition = -reviewWidth * (reviewsItemsAll.length - reviewCount);
-    } else {
-      reviewPosition += reviewWidth;
-    }
-    if (reviewsList) {
-      reviewsList.style.marginLeft = reviewPosition + 'px';
-      reviewsList.style.transition = 'margin-left 0.5s';
-    }
-
-  };
-
-  const nextReviewItem = function () {
-    reviewPosition = Math.max(reviewPosition, -reviewWidth * (reviewsItemsAll.length - reviewCount));
-    if (reviewPosition === -reviewWidth * (reviewsItemsAll.length - reviewCount)) {
-      reviewPosition = 0;
-    } else {
-      reviewPosition -= reviewWidth;
-    }
-    if (reviewsList) {
-      reviewsList.style.marginLeft = reviewPosition + 'px';
-      reviewsList.style.transition = 'margin-left 0.5s';
-    }
-  };
-
-  reviewsPrev.addEventListener('click', prevReviewItem);
-  reviewsNext.addEventListener('click', nextReviewItem);
-
-  reviewsPrev.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 13) {
-      prevReviewItem();
-    }
-  });
-
-  reviewsNext.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 13) {
-      nextReviewItem();
-    }
-  });
-}
-
-
-window.addEventListener('resize', function () {
-  screenWidthDetection();
-});
-
-
 [].forEach.call(
     document.querySelectorAll('input[type="tel"]'),
     function (input) {
@@ -241,7 +98,6 @@ window.addEventListener('resize', function () {
       input.addEventListener('focus', mask, false);
     }
 );
-screenWidthDetection();
 
 
 (() => {
@@ -291,3 +147,69 @@ if (document.querySelector('.preview__play') && document.querySelector('.preview
     video.setAttribute('src', srcVideo + '&autoplay=1');
   });
 }
+import './vendor/swiper';
+
+
+export const switchSwiper = () => {
+  const mySwiper = new Swiper('.swiper1', {
+    slidesPerView: 4,
+    spaceBetween: 40,
+    slidersPerGroup: 1,
+
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
+    },
+
+    breakpoints: {
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1000: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      850: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      550: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+    },
+  });
+};
+
+export const switchSwiperReviews = () => {
+  const mySwiper = new Swiper('.swiper2', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    slidersPerGroup: 1,
+
+    navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+    },
+  });
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+
+
+  window.addEventListener('load', () => {
+    switchSwiperReviews();
+    switchSwiper();
+  });
+});

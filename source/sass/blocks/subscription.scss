@@ -6,7 +6,7 @@
   padding-bottom: 64px;
 
   @include vp-1199 {
-    padding: 95px 0 50px;
+    padding: 100px 0 50px;
     margin-bottom: 97px;
   }
 
@@ -132,7 +132,7 @@
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 37px;
 
   @include vp-1199 {
@@ -149,6 +149,7 @@
   padding: 7px;
   position: relative;
   z-index: 1;
+  margin-right: 40px;
 
   @include vp-1199 {
     width: 442px;
@@ -162,11 +163,21 @@
   }
 }
 
-.subscription__rate-item:not(:last-child) {
-  margin-right: 40px;
+.subscription__rate-item:nth-of-type(3n) {
+  margin-right: 0;
+
+  @media (max-width: 1300px)  {
+    margin-right: 40px;
+  }
 
   @include vp-1199 {
     margin-right: 0;
+  }
+}
+
+.subscription__rate-item:nth-of-type(2n) {
+  @media (min-width: 1300px) {
+      margin-right: 40px;
   }
 }
 

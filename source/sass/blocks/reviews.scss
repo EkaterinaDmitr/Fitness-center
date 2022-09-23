@@ -20,7 +20,7 @@
   @include vp-1199 {
     font-size: 42px;
     line-height: 42px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
 
   @include vp-767 {
@@ -44,7 +44,6 @@
   @include vp-767 {
     width: 100%;
   }
-
 }
 
 .reviews__list {
@@ -72,8 +71,6 @@
     width: 100%;
     padding: 47px 25px 36px 25px;
     position: relative;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-
   }
 }
 
@@ -242,4 +239,94 @@
 
 .reviews__control-right:focus {
   outline: none;
+}
+
+.reviews__button--prev,
+.reviews__button--next {
+  position: absolute;
+  top: 56%;
+  width: 20px;
+  height: 42px;
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 42px;
+    background-image: url("../img/icon-right.svg");
+    background-repeat: no-repeat;
+
+    @include vp-767 {
+      background-image: url("../img/icon-right-mob.svg");
+      width: 20px;
+      height: 42px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #e8e8e8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+.reviews__button--prev {
+  left: 0;
+  right: auto;
+  margin-left: auto;
+
+  @include vp-1199 {
+    top: 52%;
+    left: 0;
+  }
+
+  @include vp-767 {
+    top: 50%;
+    left: -6px;
+  }
+
+  &::after {
+    top: -4px;
+    right: 0;
+    transform: rotate(180deg);
+
+    @include vp-767 {
+      top: 4%;
+      left: -12px;
+    }
+  }
+}
+
+.reviews__button--next {
+  right: 0;
+  left: auto;
+  margin-right: auto;
+
+  @include vp-1199 {
+    top: 52%;
+    right: 0;
+  }
+
+  @include vp-767 {
+    top: 53%;
+    right: -15px;
+  }
+
+  &::after {
+    top: 4px;
+    left: 3px;
+
+    @include vp-767 {
+      top: 10px;
+    }
+  }
 }

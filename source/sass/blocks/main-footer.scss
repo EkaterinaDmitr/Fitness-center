@@ -8,7 +8,7 @@
   }
 
   @include vp-767 {
-    padding: 50px 16px 40px;
+    padding: 50px 16px 87px;
   }
 }
 
@@ -26,6 +26,7 @@
     width: 100%;
     display: block;
     position: relative;
+    columns: 2;
   }
 }
 
@@ -113,11 +114,5 @@
 .main-footer__nav-list--first {
   @include vp-767 {
     margin-top: 40px;
-  }
-}
-
-.main-footer__nav-list--second {
-  @include vp-767 {
-    margin-left: 76px;
   }
 }

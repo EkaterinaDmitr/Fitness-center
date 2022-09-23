@@ -44,11 +44,12 @@
     max-height: 100%;
     flex-direction: column;
     margin-bottom: 34px;
+    align-items: center;
   }
 
-  picture {
-    display: contents;
-  }
+  // picture {
+  //   display: contents;
+  // }
 }
 
 
@@ -224,5 +225,6 @@
 
   @include vp-767 {
     max-height: 299px;
+    width: auto;
   }
 }

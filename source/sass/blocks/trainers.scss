@@ -175,11 +175,11 @@
   }
 
   @include vp-1199 {
-    max-width: 586px;
+    max-width: 568px;
   }
 
   @include vp-767 {
-    max-width: 246px;
+    max-width: 226px;
   }
 }
 
@@ -218,6 +218,7 @@
   width: 260px;
   height: 294px;
   display: block;
+  object-fit: cover;
 
   @include vp-1199 {
     width: 268px;
@@ -225,8 +226,8 @@
   }
 
   @include vp-767 {
-    width: 226px;
-    height: 274px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -353,4 +354,93 @@
 
 .trainers__item:hover .trainers__summary-list {
   display: block;
+}
+
+
+.trainers__button--prev,
+.trainers__button--next {
+  position: absolute;
+  top: 44%;
+  width: 20px;
+  height: 42px;
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 42px;
+    background-image: url("../img/icon-right.svg");
+    background-repeat: no-repeat;
+
+    @include vp-767 {
+      width: 20px;
+      height: 42px;
+      background-image: url("../img/icon-right-mob.svg");
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #e8e8e8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+.trainers__button--prev {
+  left: 0;
+  right: auto;
+  margin-left: auto;
+
+  @include vp-1199 {
+    top: 44%;
+    left: 0;
+  }
+
+  @include vp-767 {
+    top: 51%;
+  }
+
+  &::after {
+    top: -4px;
+    right: 0;
+    transform: rotate(180deg);
+
+    @include vp-767 {
+      top: -12px;
+      left: -9px;
+    }
+  }
+}
+.trainers__button--next {
+  right: 0;
+  left: auto;
+  margin-right: auto;
+
+  @include vp-1199 {
+    top: 44%;
+    right: 0;
+  }
+
+  @include vp-767 {
+    top: 51%;
+  }
+
+  &::after {
+    top: 4px;
+    left: 3px;
+
+    @include vp-767 {
+      top: 10px;
+      left: 8px;
+    }
+  }
 }

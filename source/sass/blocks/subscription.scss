@@ -6,12 +6,12 @@
   padding-bottom: 64px;
 
   @include vp-1199 {
-    padding: 100px 0 50px;
+    padding: 100px 0 94px;
     margin-bottom: 97px;
   }
 
   @include vp-767 {
-    padding: 74px 0 17px;
+    padding: 74px 0 55px;
     margin-bottom: 70px;
   }
 }
@@ -127,57 +127,44 @@
 }
 
 .subscription__rates-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  justify-content: flex-start;
   margin-top: 37px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 
   @include vp-1199 {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 42px;
+  }
+
+  @include vp-767 {
+    margin-top: 37px;
   }
 }
 
 .subscription__rate-item {
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   box-sizing: border-box;
   margin-bottom: 40px;
   background: $white;
   padding: 7px;
   position: relative;
   z-index: 1;
-  margin-right: 40px;
 
   @include vp-1199 {
-    width: 442px;
+    max-width: 442px;
     margin-right: 0;
-    margin-bottom: 36px;
+    margin-bottom: -7px;
   }
 
   @include vp-767 {
     width: 100%;
-    margin-bottom: 37px;
-  }
-}
-
-.subscription__rate-item:nth-of-type(3n) {
-  margin-right: 0;
-
-  @media (max-width: 1300px)  {
-    margin-right: 40px;
-  }
-
-  @include vp-1199 {
-    margin-right: 0;
-  }
-}
-
-.subscription__rate-item:nth-of-type(2n) {
-  @media (min-width: 1300px) {
-      margin-right: 40px;
+    margin-bottom: -2px;
   }
 }
 
@@ -187,7 +174,7 @@
 }
 
 .subscription__inner {
-  padding: 55px 70px 60px 69px;
+  padding: 55px 40px 60px 40px;
   text-align: center;
   background: $white;
 
@@ -255,22 +242,23 @@
   content: "";
   position: absolute;
   top: 25px;
-  right: 20px;
+  right: 19%;
+  left: 70%;
   width: 30px;
   height: 42px;
   z-index: 2;
   background: url("../img/icon-cureency.svg") 50% 50% no-repeat;
 
   @include vp-1199 {
-    right: 61px;
+    top: 20px;
+    left: 68%;
   }
 
   @include vp-767 {
     background-size: contain;
-    top: 20px;
-    right: 0;
     width: 24px;
     height: 33px;
+    left: 84%;
   }
 }
 
@@ -279,12 +267,13 @@
   position: absolute;
   bottom: -4px;
   left: 0;
+  right: 0;
   font-size: 100px;
   line-height: 150px;
   color: rgba(232, 232, 232, 0.48);
 
   @include vp-1199 {
-    left: 42px;
+    left: 0;
   }
 
   @include vp-767 {

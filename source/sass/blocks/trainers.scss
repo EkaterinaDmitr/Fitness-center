@@ -18,9 +18,11 @@
   }
 
   @include vp-767 {
-    max-width: 290px;
+    // max-width: 290px;
+    width: 70%;
     padding-bottom: 30px;
     margin-bottom: 30px;
+    overflow: inherit;
   }
 }
 
@@ -179,7 +181,7 @@
   }
 
   @include vp-767 {
-    max-width: 226px;
+    max-width: 100%;
   }
 }
 
@@ -210,6 +212,10 @@
 
   @include vp-767 {
     width: 226px;
+    height: 100%;
+  }
+
+  @media (max-width: 320px) {
     height: 274px;
   }
 }
@@ -249,8 +255,8 @@
   }
 
   @include vp-767 {
-    width: 226px;
-    padding-top: 220px;
+    width: 100%;
+    padding-top: 90%;
   }
 }
 
@@ -385,7 +391,7 @@
 
   &:hover,
   &:focus {
-    background-color: #e8e8e8;
+    opacity: 0.5;
   }
 
   &:disabled {
@@ -415,11 +421,12 @@
     transform: rotate(180deg);
 
     @include vp-767 {
-      top: -12px;
-      left: -9px;
+      top: -18px;
+      left: -210%;
     }
   }
 }
+
 .trainers__button--next {
   right: 0;
   left: auto;
@@ -439,8 +446,8 @@
     left: 3px;
 
     @include vp-767 {
-      top: 10px;
-      left: 8px;
+      top: 3px;
+      left: 210%;
     }
   }
 }

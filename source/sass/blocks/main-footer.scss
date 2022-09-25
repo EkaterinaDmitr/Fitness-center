@@ -32,6 +32,7 @@
 
 .main-footer__logo {
   margin-right: 0;
+  flex-shrink: 0;
 
   @include vp-1199 {
     width: 82px;
